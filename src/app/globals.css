@@ -52,7 +52,7 @@ body {
     @apply text-lg sm:text-xl text-steel leading-relaxed;
   }
   .prose-rich {
-    @apply prose-lg max-w-none text-steel leading-relaxed;
+    @apply max-w-none text-steel leading-relaxed text-lg;
   }
   .card {
     @apply rounded-xl bg-white shadow-card hover:shadow-cardHover transition-shadow duration-200;
