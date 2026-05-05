@@ -28,12 +28,17 @@ export function Hero({
           </h1>
           <p className="lede text-white/85 mt-5 max-w-2xl">{sub}</p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mt-7">
-            <Link href="/get-a-quote" className="btn-primary text-base">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 mt-7">
+            <Link href="/get-a-quote" className="btn-primary text-base whitespace-nowrap">
               Get My Free Quote <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href={tel} className="btn-outline border-white text-white hover:bg-white hover:text-navy text-base">
-              <Phone className="h-4 w-4" /> Call Keith — {business.phone}
+            <a
+              href={tel}
+              className="btn-outline border-white text-white hover:bg-white hover:text-navy text-base whitespace-nowrap"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="sm:hidden">Call {business.phone}</span>
+              <span className="hidden sm:inline">Call Keith — {business.phone}</span>
             </a>
           </div>
 
