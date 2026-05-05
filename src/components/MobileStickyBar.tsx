@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { Phone, MessageSquare } from "lucide-react";
 import { tel } from "@/lib/business";
+import { QuoteCta } from "./QuoteCta";
 
 export function MobileStickyBar() {
   return (
@@ -14,12 +14,9 @@ export function MobileStickyBar() {
       >
         <Phone className="h-5 w-5" /> Call Now
       </a>
-      <Link
-        href="/get-a-quote"
-        className="flex-1 flex items-center justify-center gap-2 py-4 bg-cherry text-white font-semibold"
-      >
+      <QuoteCta className="flex-1 flex items-center justify-center gap-2 py-4 bg-cherry text-white font-semibold">
         <MessageSquare className="h-5 w-5" /> Quick Quote
-      </Link>
+      </QuoteCta>
     </div>
   );
 }

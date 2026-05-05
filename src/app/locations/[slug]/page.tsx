@@ -106,7 +106,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
 
-        <aside className="lg:sticky lg:top-24 self-start">
+        <aside id="quote" className="lg:sticky lg:top-24 self-start scroll-mt-24">
           <QuoteForm />
         </aside>
       </section>

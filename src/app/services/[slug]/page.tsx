@@ -18,6 +18,7 @@ import { LocationsGrid } from "@/components/LocationsGrid";
 import { FAQ } from "@/components/FAQ";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CTASection } from "@/components/CTASection";
+import { QuoteCta } from "@/components/QuoteCta";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/schema";
 
 export async function generateStaticParams() {
@@ -70,7 +71,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </div>
           ))}
         </div>
-        <aside className="lg:sticky lg:top-24 self-start">
+        <aside id="quote" className="lg:sticky lg:top-24 self-start scroll-mt-24">
           <QuoteForm />
         </aside>
       </section>
@@ -117,7 +118,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-primary">Read full cost guide</Link>
-                  <Link href="/get-a-quote" className="btn-outline">Get a fixed quote</Link>
+                  <QuoteCta className="btn-outline">Get a fixed quote</QuoteCta>
                 </div>
               </div>
               <PricingTable />

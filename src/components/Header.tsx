@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Menu, Phone, X, ChevronDown } from "lucide-react";
 import { business, tel } from "@/lib/business";
 import { services } from "@/lib/services";
+import { QuoteCta } from "./QuoteCta";
 
 const nav = [
   { label: "Services", href: "/services/cold-room-installation-brisbane", children: services.map((s) => ({ label: s.shortTitle, href: `/services/${s.slug}` })) },
@@ -71,9 +72,9 @@ export function Header() {
           >
             <Phone className="h-4 w-4" /> {business.phone}
           </a>
-          <Link href="/get-a-quote" className="btn-primary text-sm">
+          <QuoteCta className="btn-primary text-sm">
             Get a Quote
-          </Link>
+          </QuoteCta>
         </div>
 
         <button
@@ -105,9 +106,9 @@ export function Header() {
               >
                 <Phone className="h-4 w-4" /> Call
               </a>
-              <Link href="/get-a-quote" className="btn-primary flex-1 text-sm" onClick={() => setMenuOpen(false)}>
+              <QuoteCta className="btn-primary flex-1 text-sm" onClick={() => setMenuOpen(false)}>
                 Get a Quote
-              </Link>
+              </QuoteCta>
             </div>
           </nav>
         </div>

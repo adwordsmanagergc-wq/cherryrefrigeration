@@ -45,7 +45,7 @@ export default function ContactPage() {
             </a>
           </div>
         </div>
-        <div>
+        <div id="quote" className="scroll-mt-24">
           <QuoteForm />
         </div>
       </section>

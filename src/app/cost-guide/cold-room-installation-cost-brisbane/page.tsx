@@ -122,7 +122,7 @@ export default function Page() {
           </section>
         </div>
 
-        <aside className="lg:sticky lg:top-24 self-start space-y-5">
+        <aside id="quote" className="lg:sticky lg:top-24 self-start space-y-5 scroll-mt-24">
           <QuoteForm />
           <div className="card p-5">
             <div className="font-display font-bold text-navy mb-2">Why operators trust our pricing</div>

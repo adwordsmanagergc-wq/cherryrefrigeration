@@ -95,7 +95,7 @@ export function QuoteForm({ multiStep = false }: { multiStep?: boolean }) {
       {(!multiStep || step === 0) && (
         <div className="grid sm:grid-cols-2 gap-3">
           <Field label="Your name" error={errors.name?.message}>
-            <input type="text" autoFocus className="input" {...register("name")} />
+            <input type="text" className="input" {...register("name")} />
           </Field>
           <Field label="Phone" error={errors.phone?.message}>
             <input type="tel" className="input" {...register("phone")} />

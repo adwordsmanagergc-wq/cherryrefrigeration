@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { Phone, ArrowRight } from "lucide-react";
 import { business, tel } from "@/lib/business";
+import { QuoteCta } from "./QuoteCta";
 
 export function CTASection({ heading = "Get a fixed-price quote within 24 hours", sub }: { heading?: string; sub?: string }) {
   return (
@@ -14,9 +14,9 @@ export function CTASection({ heading = "Get a fixed-price quote within 24 hours"
           </p>
         </div>
         <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
-          <Link href="/get-a-quote" className="btn-primary text-base">
+          <QuoteCta className="btn-primary text-base">
             Get My Free Quote <ArrowRight className="h-4 w-4" />
-          </Link>
+          </QuoteCta>
           <a href={tel} className="btn-outline border-white text-white hover:bg-white hover:text-navy text-base">
             <Phone className="h-4 w-4" /> Call {business.phone}
           </a>
