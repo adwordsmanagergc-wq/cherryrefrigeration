@@ -1,5 +1,4 @@
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Benefits } from "@/components/Benefits";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { ServicesGrid } from "@/components/ServicesGrid";
@@ -19,7 +18,6 @@ export default function HomePage() {
         h1="Cold Room Installation Brisbane — Custom Built and Energy-Efficient"
         sub="Cherry Refrigeration designs, manufactures and installs commercial cold rooms across Brisbane and SE Queensland. Free fixed-price quote within 24 hours."
       />
-      <TrustStrip />
       <Benefits />
       <ProcessSteps />
       <SupplierStrip />

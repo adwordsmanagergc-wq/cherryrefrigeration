@@ -6,7 +6,6 @@ import { locations, getLocation } from "@/lib/locations";
 import { services } from "@/lib/services";
 import { business, tel } from "@/lib/business";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -35,7 +34,6 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
     <>
       <JsonLd data={serviceSchema({ name: `Cold Room Installation ${l.city}`, description: l.metaDescription, slug: `locations/${l.slug}`, area: l.city })} />
       <Hero eyebrow={`Service area: ${l.city}`} h1={l.h1} sub={l.intro} />
-      <TrustStrip />
       <Breadcrumbs items={[{ name: "Locations", href: "/locations/brisbane-cbd" }, { name: l.city, href: `/locations/${l.slug}` }]} />
 
       <section className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10">

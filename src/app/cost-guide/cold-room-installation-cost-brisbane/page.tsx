@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PricingTable } from "@/components/PricingTable";
 import { FAQ } from "@/components/FAQ";
@@ -67,7 +66,6 @@ export default function Page() {
         h1="Cold Room Installation Cost in Brisbane — 2025"
         sub="An indicative guide to Brisbane cold room installation costs in 2025 — small cafe walk-in to industrial freezer, plus the variables that move the price. Your fixed-price quote is confirmed after on-site measure-up."
       />
-      <TrustStrip />
       <Breadcrumbs items={[{ name: "Cost guide", href: "/cost-guide/cold-room-installation-cost-brisbane" }]} />
 
       <article className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10">

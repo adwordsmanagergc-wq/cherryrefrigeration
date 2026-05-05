@@ -6,7 +6,6 @@ import { industries, getIndustry } from "@/lib/industries";
 import { services } from "@/lib/services";
 import { business } from "@/lib/business";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { QuoteForm } from "@/components/QuoteForm";
@@ -35,7 +34,6 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
     <>
       <JsonLd data={serviceSchema({ name: `Cold rooms for ${i.name}`, description: i.metaDescription, slug: `industries/${i.slug}` })} />
       <Hero h1={i.h1} sub={i.intro} eyebrow={`Industry: ${i.name}`} />
-      <TrustStrip />
       <Breadcrumbs items={[{ name: "Industries", href: "/industries/restaurants-cafes" }, { name: i.name, href: `/industries/${i.slug}` }]} />
 
       <section className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10">

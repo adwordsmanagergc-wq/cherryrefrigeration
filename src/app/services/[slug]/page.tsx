@@ -8,7 +8,6 @@ import { serviceFaqs } from "@/lib/serviceFaqs";
 import { moneyPageFaqs } from "@/lib/faqs";
 import { business, tel } from "@/lib/business";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { PricingTable } from "@/components/PricingTable";
@@ -52,7 +51,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         ]}
       />
       <Hero h1={s.h1} sub={s.intro} />
-      <TrustStrip />
 
       <Breadcrumbs items={[{ name: "Services", href: "/services/cold-room-installation-brisbane" }, { name: s.shortTitle, href: `/services/${s.slug}` }]} />
 

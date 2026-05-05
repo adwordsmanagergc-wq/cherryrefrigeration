@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Testimonials } from "@/components/Testimonials";
@@ -17,7 +16,6 @@ export default function GetAQuote() {
   return (
     <>
       <Hero eyebrow="Free quote — 24 hours" h1="Get a free fixed-price cold room quote" sub="Tell Keith what you need. We'll send a fixed-price quote within 24 business hours — no obligations, no chasing." showImage={false} />
-      <TrustStrip />
       <Breadcrumbs items={[{ name: "Get a Quote", href: "/get-a-quote" }]} />
       <section className="container-x py-14 lg:py-20 grid lg:grid-cols-2 gap-10">
         <div className="space-y-6">

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Phone, AlertTriangle, Clock, Check } from "lucide-react";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { business, tel } from "@/lib/business";
@@ -21,7 +20,6 @@ export default function Emergency() {
         sub="Cherry Refrigeration's emergency line runs 24/7 for total breakdowns. Same-day across Greater Brisbane during business hours. Stock-loss support available."
         showImage={false}
       />
-      <TrustStrip />
       <Breadcrumbs items={[{ name: "Emergency repairs", href: "/emergency-repairs" }]} />
       <section className="container-x py-14 lg:py-20">
         <div className="card p-8 bg-cherry text-white text-center max-w-xl mx-auto">

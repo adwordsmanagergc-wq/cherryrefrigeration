@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { business } from "@/lib/business";
@@ -19,7 +18,6 @@ export default function AboutPage() {
         h1="Cold rooms, refrigeration and electrical — done by the same team"
         sub="Cherry Refrigeration is a Brisbane custom cold room installer founded by Keith Cherry, covering refrigeration, electrical and air conditioning across South East Queensland."
       />
-      <TrustStrip />
       <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
 
       <article className="container-x py-14 lg:py-20 max-w-prose mx-auto space-y-8">
