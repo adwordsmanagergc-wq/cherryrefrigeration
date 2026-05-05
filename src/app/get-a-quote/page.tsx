@@ -9,7 +9,7 @@ import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Get a Free Cold Room Quote — Brisbane | Cherry Refrigeration",
-  description: "Free fixed-price cold room quote within 24 business hours. Custom design, full electrical, 5-year warranty. Brisbane and SE QLD.",
+  description: "Free fixed-price cold room quote within 24 business hours. Custom design and full electrical scope. Brisbane and SE QLD.",
   alternates: { canonical: `${business.url}/get-a-quote` },
 };
 
@@ -29,7 +29,7 @@ export default function GetAQuote() {
               "Refrigeration + electrical scope in one number",
               "Published Brisbane pricing — no hidden surprises",
               "Tenancy compliance letter included where needed",
-              "5-year workmanship warranty in writing",
+              "Workmanship warranty in writing",
             ].map((b) => (
               <li key={b} className="flex gap-3"><Check className="h-5 w-5 text-cherry shrink-0 mt-0.5" /> <span>{b}</span></li>
             ))}

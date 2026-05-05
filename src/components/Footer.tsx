@@ -12,8 +12,8 @@ export function Footer() {
         <div className="lg:col-span-2">
           <div className="font-display font-extrabold text-2xl mb-3">Cherry Refrigeration</div>
           <p className="text-white/80 max-w-md mb-5 leading-relaxed">
-            Brisbane's most trusted custom cold room installer. Refrigeration, electrical and air conditioning under one
-            licensed roof — covering Brisbane, the Gold Coast and South East Queensland.
+            Custom cold room installation, refrigeration and air conditioning across Brisbane and South East
+            Queensland.
           </p>
           <ul className="space-y-2 text-sm">
             <li className="flex gap-2"><Phone className="h-4 w-4 text-frost" /><a href={tel} className="hover:underline">{business.phone}</a></li>
@@ -21,12 +21,14 @@ export function Footer() {
             <li className="flex gap-2"><MapPin className="h-4 w-4 text-frost" />Servicing Brisbane & SE QLD</li>
             <li className="flex gap-2"><Clock className="h-4 w-4 text-frost" />Mon–Fri 7am–5pm • Sat 8am–1pm • 24/7 emergency</li>
           </ul>
-          <div className="mt-5 flex flex-wrap gap-2 text-xs">
-            <span className="badge bg-white/10 text-white">{business.qbcc}</span>
-            <span className="badge bg-white/10 text-white">{business.arc}</span>
-            <span className="badge bg-white/10 text-white">Master Electricians</span>
-            <span className="badge bg-white/10 text-white">PL Insurance {business.publicLiability}</span>
-          </div>
+          {(business.qbcc || business.arc || business.masterElectricians || business.publicLiability) && (
+            <div className="mt-5 flex flex-wrap gap-2 text-xs">
+              {business.qbcc && <span className="badge bg-white/10 text-white">{business.qbcc}</span>}
+              {business.arc && <span className="badge bg-white/10 text-white">{business.arc}</span>}
+              {business.masterElectricians && <span className="badge bg-white/10 text-white">Master Electricians</span>}
+              {business.publicLiability && <span className="badge bg-white/10 text-white">PL Insurance {business.publicLiability}</span>}
+            </div>
+          )}
         </div>
 
         <div>

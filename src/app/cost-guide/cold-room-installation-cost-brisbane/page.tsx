@@ -65,7 +65,7 @@ export default function Page() {
       <Hero
         eyebrow="2025 Cost Guide"
         h1="Cold Room Installation Cost in Brisbane — 2025"
-        sub="A real, no-fluff guide to what a Brisbane cold room actually costs in 2025 — small cafe walk-in to industrial freezer, plus the variables that genuinely move the price."
+        sub="An indicative guide to Brisbane cold room installation costs in 2025 — small cafe walk-in to industrial freezer, plus the variables that move the price. Your fixed-price quote is confirmed after on-site measure-up."
       />
       <TrustStrip />
       <Breadcrumbs items={[{ name: "Cost guide", href: "/cost-guide/cold-room-installation-cost-brisbane" }]} />
@@ -132,8 +132,8 @@ export default function Page() {
               <li>• Fixed-price quote in 24 hours</li>
               <li>• Published Brisbane pricing</li>
               <li>• Refrigeration + electrical in one quote</li>
-              <li>• 5-year workmanship warranty</li>
-              <li>• {business.qbcc}</li>
+              <li>• Workmanship warranty in writing</li>
+              
             </ul>
           </div>
           <div className="card p-5">

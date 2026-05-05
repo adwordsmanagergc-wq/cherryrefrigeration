@@ -16,8 +16,8 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        h1="Cold Room Installation Brisbane — Custom Built, Energy-Efficient, Fully Licensed"
-        sub="Cherry Refrigeration designs, manufactures and installs commercial cold rooms across Brisbane and SE Queensland. QBCC + ARC + Master Electricians licensed under one roof. Free fixed-price quote within 24 hours."
+        h1="Cold Room Installation Brisbane — Custom Built and Energy-Efficient"
+        sub="Cherry Refrigeration designs, manufactures and installs commercial cold rooms across Brisbane and SE Queensland. Free fixed-price quote within 24 hours."
       />
       <TrustStrip />
       <Benefits />

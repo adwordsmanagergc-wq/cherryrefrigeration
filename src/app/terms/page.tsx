@@ -21,7 +21,7 @@ export default function TermsPage() {
         <p className="text-steel">All quotes are valid for 30 days unless otherwise stated. Fixed-price quotes are based on the agreed scope and the conditions confirmed at site assessment. Variations require written sign-off.</p>
 
         <h2 className="h3 mt-8 mb-3">Warranty</h2>
-        <p className="text-steel">Cherry Refrigeration provides a 5-year workmanship warranty on installations and registers full manufacturer warranty on compressors, condensers and evaporators. Door seals carry a 2-year warranty against defects. Warranty excludes damage from misuse, third-party modifications, or events outside our control.</p>
+        <p className="text-steel">Cherry Refrigeration registers full manufacturer warranty on compressors, condensers and evaporators on each install, plus a workmanship warranty whose duration and scope is set out in your written quote. Warranty excludes damage from misuse, third-party modifications, or events outside our control.</p>
 
         <h2 className="h3 mt-8 mb-3">Payment</h2>
         <p className="text-steel">Standard terms are 30% deposit on order, balance on commissioning. Service work is invoiced on completion, payable within 7 days unless otherwise agreed.</p>

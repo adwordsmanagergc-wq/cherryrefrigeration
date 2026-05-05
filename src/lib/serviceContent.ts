@@ -2,8 +2,8 @@
 export const serviceContent: Record<string, { heading: string; copy: string }[]> = {
   "cold-room-installation-brisbane": [
     {
-      heading: "Brisbane's most-installed custom cold rooms",
-      copy: "Cherry Refrigeration has been installing cold rooms across Brisbane for more than 15 years — restaurants in Fortitude Valley, butchers in West End, bakeries in Wynnum, breweries in Newstead, supermarkets in Carindale, distribution centres in Eagle Farm. Every cold room is custom-built to your space, your stock and your throughput. We don't sell flat-pack, one-size-fits-all rooms.",
+      heading: "Custom cold rooms across Brisbane and SE QLD",
+      copy: "Cherry Refrigeration installs custom cold rooms across Brisbane and South East Queensland — restaurants, butchers, bakeries, breweries, supermarkets and distribution facilities. Every cold room is custom-built to your space, your stock and your throughput. We don't sell flat-pack, one-size-fits-all rooms.",
     },
     {
       heading: "Cold room types we install",
@@ -15,7 +15,7 @@ export const serviceContent: Record<string, { heading: string; copy: string }[]>
     },
     {
       heading: "Refrigeration + electrical, one team",
-      copy: "Most Brisbane cold room companies subcontract the electrical work. Cherry Refrigeration is a Master Electricians member with in-house licensed electricians, so we deliver three-phase mains, switchboard upgrades, isolators, sub-circuits and Certificate of Test as part of the same install. One trade, one quote, one warranty — and zero coordination headaches.",
+      copy: "Most Brisbane cold room companies subcontract the electrical work. Cherry Refrigeration coordinates the electrical scope in-house — three-phase mains, switchboard upgrades, isolators, sub-circuits and Certificate of Test all delivered as part of the same install. One quote, one program, one warranty.",
     },
     {
       heading: "Compliance and certification",
@@ -118,8 +118,8 @@ export const serviceContent: Record<string, { heading: string; copy: string }[]>
   ],
   "electrical-installation-brisbane": [
     {
-      heading: "Master Electricians member",
-      copy: "Cherry Refrigeration's electrical division is a Master Electricians member — a higher-than-mandatory standard for licensing, training and insurance.",
+      heading: "Licensed electrical scope",
+      copy: "Cherry Refrigeration delivers electrical work to the licensing standards required in Queensland. Licence details are confirmed in writing on every quote.",
     },
     {
       heading: "Three-phase and switchboard work",

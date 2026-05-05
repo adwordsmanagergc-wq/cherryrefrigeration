@@ -70,11 +70,13 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
 
-          <div className="card p-6 bg-navy text-white">
-            <div className="text-xs uppercase tracking-widest text-frost font-semibold mb-1">Sample project</div>
-            <h3 className="font-display font-bold text-xl">{l.sampleProject.title}</h3>
-            <p className="text-white/85 mt-3 leading-relaxed">{l.sampleProject.copy}</p>
-          </div>
+          {l.sampleProject && (
+            <div className="card p-6 bg-navy text-white">
+              <div className="text-xs uppercase tracking-widest text-frost font-semibold mb-1">Sample project</div>
+              <h3 className="font-display font-bold text-xl">{l.sampleProject.title}</h3>
+              <p className="text-white/85 mt-3 leading-relaxed">{l.sampleProject.copy}</p>
+            </div>
+          )}
 
           <div className="aspect-[16/9] rounded-xl overflow-hidden border border-navy/10 bg-white">
             <iframe

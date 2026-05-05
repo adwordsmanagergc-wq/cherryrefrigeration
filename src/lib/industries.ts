@@ -7,7 +7,7 @@ export type Industry = {
   intro: string;
   pains: string[];
   solutions: string[];
-  caseStudy: { title: string; suburb: string; copy: string };
+  caseStudy?: { title: string; suburb: string; copy: string };
 };
 
 export const industries: Industry[] = [
@@ -34,11 +34,6 @@ export const industries: Industry[] = [
       "After-hours installs and overnight commissioning",
       "Digital temperature logging integrated with your HACCP plan",
     ],
-    caseStudy: {
-      title: "Modern Italian, James Street",
-      suburb: "Fortitude Valley",
-      copy: "Twin walk-in chillers (3.6m × 2.4m and 2.4m × 1.8m) plus a -20°C ice cream freezer fitted in 9 days, commissioned overnight to avoid a single lost service.",
-    },
   },
   {
     slug: "butchers",
@@ -63,11 +58,6 @@ export const industries: Industry[] = [
       "Oversized condensers spec'd for 38°C ambient",
       "Blast chiller add-ons matched to your kill cycle",
     ],
-    caseStudy: {
-      title: "Family Butcher, South Brisbane",
-      suburb: "West End",
-      copy: "Carcass chiller with twin rails, 35 kg/m capacity, 0.5°C set point, plus matching -22°C freezer room. Installed and HACCP-signed-off in 11 working days.",
-    },
   },
   {
     slug: "florists",
@@ -92,11 +82,6 @@ export const industries: Industry[] = [
       "Powder-coated frames colour-matched to shopfit",
       "Compact corner footprints from 2m × 1.5m",
     ],
-    caseStudy: {
-      title: "Boutique Florist, Paddington",
-      suburb: "Paddington",
-      copy: "3.0m × 2.0m glass-front display cold room at 4°C / 90% RH with ultrasonic humidifier and powder-coated bronze frames to match the shopfit. Installed in 7 days.",
-    },
   },
   {
     slug: "pharmacy-medical",
@@ -121,11 +106,6 @@ export const industries: Industry[] = [
       "Tight ±0.5°C control with anti-freeze logic",
       "SMS and email alarm escalation paths",
     ],
-    caseStudy: {
-      title: "Medical Centre Cold Room, Chermside",
-      suburb: "Chermside",
-      copy: "2.4m × 2.0m vaccine-grade cold room with twin refrigeration, UPS controls, calibrated probes and SMS alarming. Strive for 5 audited and signed off first visit.",
-    },
   },
   {
     slug: "supermarkets-grocers",
@@ -150,11 +130,6 @@ export const industries: Industry[] = [
       "Overnight install and commissioning crews",
       "Monthly service plans with photo reports",
     ],
-    caseStudy: {
-      title: "Independent Grocer, Carindale",
-      suburb: "Carindale",
-      copy: "Combi 4°C / -20°C back-of-house room (8m × 4m), glycol loop to 12 display cases, R448A refrigerant. Cut running costs 31% year-on-year.",
-    },
   },
   {
     slug: "breweries-distilleries",
@@ -179,11 +154,6 @@ export const industries: Industry[] = [
       "150mm panel keg stores with insulated floors",
       "Stainless penetrations for CIP and gas lines",
     ],
-    caseStudy: {
-      title: "Craft Brewery, Newstead",
-      suburb: "Newstead",
-      copy: "30 kW glycol chiller with 1,500 L buffer, 8m × 6m × 3.6m keg cold store, and rapid-crash evap on the brite-tank. Installed during a 6-day brew shutdown.",
-    },
   },
   {
     slug: "seafood-distributors",
@@ -208,11 +178,6 @@ export const industries: Industry[] = [
       "Blast freezer cells from -35°C",
       "Rapid-roll insulated traffic doors with strip curtains",
     ],
-    caseStudy: {
-      title: "Seafood Wholesaler, Rocklea",
-      suburb: "Rocklea",
-      copy: "10m × 8m -22°C freezer room with stainless skin and trough drainage, plus a 3-tonne blast freezer cell at -35°C. Held temp through the 2024 February heatwave.",
-    },
   },
   {
     slug: "cold-storage-logistics",
@@ -237,11 +202,6 @@ export const industries: Industry[] = [
       "Engineer-signed racking integration",
       "BRC and HACCP-ready documentation pack",
     ],
-    caseStudy: {
-      title: "3PL Cold Store, Eagle Farm",
-      suburb: "Eagle Farm",
-      copy: "1,200 m² combi facility with 600 m² of -22°C, 600 m² of 2°C, racking integration and EC-fan evaporators. 27% energy reduction vs the previous facility.",
-    },
   },
 ];
 

@@ -2,7 +2,8 @@ import { business } from "./business";
 import { services } from "./services";
 
 export function localBusinessSchema() {
-  return {
+  const sameAs = [business.social.facebook, business.social.instagram, business.social.google].filter(Boolean);
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
     "@id": `${business.url}#business`,
@@ -42,12 +43,6 @@ export function localBusinessSchema() {
         closes: "13:00",
       },
     ],
-    sameAs: [business.social.facebook, business.social.instagram, business.social.google],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: business.rating.value,
-      reviewCount: business.rating.count,
-    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Refrigeration & Electrical Services",
@@ -57,6 +52,17 @@ export function localBusinessSchema() {
       })),
     },
   };
+  if (sameAs.length) schema.sameAs = sameAs;
+  // aggregateRating intentionally omitted — only emit when real Google review
+  // data is wired in. Faking it is a Google rich-results policy violation.
+  if (business.rating) {
+    schema.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: business.rating.value,
+      reviewCount: business.rating.count,
+    };
+  }
+  return schema;
 }
 
 export function organizationSchema() {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Cherry Refrigeration",
   },
   description:
-    "Brisbane's most trusted custom cold room installer. QBCC licensed, 5-year warranty, 24/7 emergency service. Free quote in 24 hours. Call Keith on 0432 115 513.",
+    "Brisbane custom cold room installation, refrigeration and air conditioning. 24/7 emergency line. Free fixed-price quote within 24 hours. Call Keith on 0432 115 513.",
   alternates: { canonical: business.url },
   openGraph: {
     type: "website",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Cold Room Installation Brisbane | Cherry Refrigeration",
-    description: "Brisbane's most trusted cold room installer. Free quote in 24 hours.",
+    description: "Brisbane custom cold room installer. Free fixed-price quote in 24 hours.",
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },

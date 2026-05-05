@@ -2,6 +2,7 @@ import Link from "next/link";
 import { projects } from "@/lib/projects";
 
 export function ProjectsGallery({ limit }: { limit?: number }) {
+  if (projects.length === 0) return null;
   const items = limit ? projects.slice(0, limit) : projects;
   return (
     <section className="container-x py-14 lg:py-20">

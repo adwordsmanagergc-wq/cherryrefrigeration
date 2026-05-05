@@ -4,8 +4,8 @@ const items = [
   { icon: Wrench, title: "Custom-built to your space", copy: "Every cold room is engineered to fit your tenancy — corner pieces, awkward walls, low ceilings, no problem." },
   { icon: Zap, title: "Energy-efficient panels", copy: "100mm and 150mm high-density EPS or PIR. Combined with EC-fan evaporators and inverter condensers, typically 25–40% cheaper to run." },
   { icon: Clock, title: "Fast 2-week turnaround", copy: "From sign-off to commissioning in 7–14 working days for most fitouts. Industrial scale on a documented timeline." },
-  { icon: ShieldCheck, title: "Refrigeration + electrical in one team", copy: "Master Electricians and ARC-licensed refrigeration mechanics under one roof. One trade, one quote, one warranty." },
-  { icon: Award, title: "5-year workmanship warranty", copy: "Full manufacturer warranty registration on compressors, condensers and evaporators — plus our own 5-year workmanship cover." },
+  { icon: ShieldCheck, title: "Refrigeration + electrical in one quote", copy: "Refrigeration and electrical scope coordinated in-house, so you get one program, one quote and one point of contact." },
+  { icon: Award, title: "Workmanship warranty", copy: "Full manufacturer warranty registration on compressors, condensers and evaporators, plus our workmanship warranty — terms confirmed in your written quote." },
   { icon: PhoneCall, title: "24/7 emergency support", copy: "Live emergency line for total breakdowns, with same-day response across Greater Brisbane." },
 ];
 

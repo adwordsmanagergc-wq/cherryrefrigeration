@@ -64,11 +64,13 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
             </ul>
           </div>
 
-          <div className="card p-6 bg-navy text-white">
-            <div className="text-xs uppercase tracking-widest text-frost font-semibold mb-1">Sample project</div>
-            <h3 className="font-display font-bold text-xl">{i.caseStudy.title} — {i.caseStudy.suburb}</h3>
-            <p className="text-white/85 mt-3 leading-relaxed">{i.caseStudy.copy}</p>
-          </div>
+          {i.caseStudy && (
+            <div className="card p-6 bg-navy text-white">
+              <div className="text-xs uppercase tracking-widest text-frost font-semibold mb-1">Sample project</div>
+              <h3 className="font-display font-bold text-xl">{i.caseStudy.title} — {i.caseStudy.suburb}</h3>
+              <p className="text-white/85 mt-3 leading-relaxed">{i.caseStudy.copy}</p>
+            </div>
+          )}
 
           <div>
             <h2 className="h3 mb-3">Services we deliver for {i.name.toLowerCase()}</h2>

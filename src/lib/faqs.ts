@@ -9,11 +9,11 @@ export const moneyPageFaqs = [
   },
   {
     q: "Do you provide the electrical work?",
-    a: "Yes — Cherry Refrigeration is a Master Electricians member with in-house licensed electricians. We deliver mains, switchboard, isolators, sub-circuits and Certificate of Test on every install. One trade, one quote, one warranty.",
+    a: "Yes — Cherry Refrigeration coordinates the electrical scope (mains, switchboard, isolators, sub-circuits and Certificate of Test) as part of every install, so you get one quote, one program and one point of contact.",
   },
   {
     q: "Do you build to QBCC standards?",
-    a: "Always. Cherry Refrigeration is QBCC licensed (#15287310). Every cold room install is documented to QBCC standards and signed off by our QBCC nominee.",
+    a: "Yes — every cold room install is documented and delivered to QBCC standards. We'll provide our current QBCC licence details on quote.",
   },
   {
     q: "What size cold room do I need?",
@@ -25,7 +25,7 @@ export const moneyPageFaqs = [
   },
   {
     q: "What warranty do you offer?",
-    a: "5 years on workmanship, plus full manufacturer warranty registration on compressors, condensers and evaporators. Doors and seals carry a 2-year warranty against defects.",
+    a: "Workmanship warranty plus full manufacturer warranty registration on compressors, condensers and evaporators. Exact warranty terms are confirmed in your written quote.",
   },
   {
     q: "Do you service the cold room after install?",

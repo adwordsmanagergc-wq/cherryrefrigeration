@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, ArrowRight, ShieldCheck, Clock, Award, Star } from "lucide-react";
+import { Phone, ArrowRight, ShieldCheck, Clock, Award, Star, MapPin } from "lucide-react";
 import { business, tel } from "@/lib/business";
 import { ColdRoomGraphic } from "./ColdRoomGraphic";
 
@@ -37,11 +37,10 @@ export function Hero({
             </a>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-xl">
-            <Stat icon={Clock} label={`${business.yearsInBusiness}+ yrs`} sub="In business" />
-            <Stat icon={ShieldCheck} label="QBCC" sub="Licensed" />
-            <Stat icon={Award} label="ARC + Master" sub="Electricians" />
-            <Stat icon={Star} label={`${business.rating.value}★`} sub={`${business.rating.count}+ reviews`} />
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8 max-w-xl">
+            <Stat icon={MapPin} label="Brisbane & SE QLD" sub="Service area" />
+            <Stat icon={Clock} label="24/7" sub="Emergency response" />
+            <Stat icon={ShieldCheck} label="Free quote" sub="Within 24 hours" />
           </div>
         </div>
 

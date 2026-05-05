@@ -4,7 +4,7 @@ export const serviceFaqs: Record<string, { q: string; a: string }[]> = {
     { q: "Is the quote fixed?", a: "Yes — the price we quote is the price you pay. The only variations are for client-requested scope changes, signed off in writing." },
     { q: "Do you handle the electrical work?", a: "Yes, in-house. Mains, switchboard, isolators, sub-circuits and Certificate of Test all included." },
     { q: "Can you install while we're trading?", a: "Yes. After-hours and overnight installs are routine. We'll coordinate to your trading hours." },
-    { q: "What warranty do you offer?", a: "5 years on workmanship, plus full manufacturer warranty registration on compressors, condensers and evaporators. Door seals 2 years." },
+    { q: "What warranty do you offer?", a: "Workmanship warranty plus full manufacturer warranty registration on plant. Exact terms confirmed in your written quote." },
     { q: "Do you service after install?", a: "Yes — service plans and breakdown response. First 30-day tune-up is free on every install." },
   ],
   "cold-room-repairs-brisbane": [
@@ -26,7 +26,7 @@ export const serviceFaqs: Record<string, { q: string; a: string }[]> = {
   "freezer-room-installation-brisbane": [
     { q: "How cold can you go?", a: "Standard freezer rooms run -18°C to -25°C. Blast freezer cells go to -35°C." },
     { q: "Do I need a combi cool/freezer room?", a: "If less than 30% of your stock needs freezing, a combi room is almost always cheaper to run and install than two separate rooms." },
-    { q: "What's the warranty?", a: "5 years on workmanship, full manufacturer warranty on plant. Heated frame heater wires carry a 2-year warranty." },
+    { q: "What's the warranty?", a: "Workmanship warranty plus full manufacturer warranty registration on plant. Exact terms confirmed in your written quote." },
   ],
   "commercial-refrigeration-brisbane": [
     { q: "Do you service display cases?", a: "Yes — every common brand. Service plans available for multi-store grocers and supermarkets." },

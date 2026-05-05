@@ -14,13 +14,12 @@ export const blogPosts: BlogPost[] = [
     slug: "cold-room-installation-cost-brisbane-2025",
     title: "How Much Does a Cold Room Cost to Install in Brisbane (2025 Guide)",
     description:
-      "A real, no-fluff guide to cold room installation costs in Brisbane in 2025 — small, medium, freezer and industrial — with the variables that actually move the price.",
+      "An indicative guide to cold room installation costs in Brisbane in 2025 — small, medium, freezer and industrial — and the variables that actually move the price.",
     date: "2025-09-08",
     author: "Keith Cherry",
-    reviewer: "Cherry Refrigeration QBCC team",
     category: "Pricing",
     body: [
-      "If you've called three Brisbane refrigeration companies for a cold room quote, you've probably had three wildly different numbers — sometimes a $4,000 spread on the same room. Here's why, and what an honest 2025 Brisbane cold room actually costs.",
+      "If you've called three Brisbane refrigeration companies for a cold room quote, you've probably had three wildly different numbers — sometimes a $4,000 spread on the same room. Here's why, and indicative ranges for a Brisbane cold room in 2025. These are typical industry ranges only — your fixed-price quote will be confirmed after on-site measure-up.",
       "A small 3m × 3m × 2.4m chiller for a cafe sits between $4,000 and $8,000 installed. A medium 5m × 4m × 2.7m for a restaurant or grocer is $8,000–$15,000. A 5m × 5m × 2.7m freezer at -18°C runs $12,000–$25,000, and industrial-scale rooms start around $25,000 and run well past $40,000 once racking, doors and three-phase plant come in.",
       "What moves the price most? Panel thickness (100mm vs 150mm), refrigerant choice, condenser sizing for our climate, the door package, electrical sub-mains, and whether the floor needs an insulated panel or can sit on slab. Tenancy fitout requirements and council approvals can add 5–15% on top of the base build.",
       "The fixed-price quote we issue includes everything — design, panels, refrigeration, electrical, doors, commissioning and certification — so you know the final number before we order panels.",
@@ -110,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     category: "Compliance",
     body: [
       "Cold room installs in Queensland touch three licensing regimes, and a legitimate installer holds all three. QBCC for the building work (panels are a structure under QBCC). ARC for the refrigeration handling. An open electrical licence for the wiring.",
-      "Cherry Refrigeration holds all three in-house — no sub-contracted sparkies, no 'we know a guy' refrigeration. One trade, one warranty, one number to call when something goes wrong.",
+      "A reputable installer either holds all three licences in-house or works with a long-term licensed partner — and can hand you the licence numbers on the spot.",
       "Ask anyone quoting your job: 'What's your QBCC licence number? Your ARC number? Your electrical licence?' If they hesitate or hand it off to a sub-contractor, walk away.",
     ],
   },

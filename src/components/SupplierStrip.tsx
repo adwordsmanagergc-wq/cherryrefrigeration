@@ -1,6 +1,7 @@
 import { business } from "@/lib/business";
 
 export function SupplierStrip() {
+  if (!business.suppliers || business.suppliers.length === 0) return null;
   return (
     <section className="bg-white border-y border-navy/10">
       <div className="container-x py-8">

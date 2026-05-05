@@ -107,9 +107,10 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 <span className="badge-cherry">Cost guide</span>
                 <h2 className="h2 mt-3">Cold room installation cost in Brisbane</h2>
                 <p className="lede mt-3">
-                  Most companies hide pricing — we don't. The table below is real Brisbane 2025 pricing for a fully
-                  installed, commissioned and certified cold room. Variations come from refrigerant choice, condenser
-                  sizing, door package, sub-main electrical and tenancy fitout requirements.
+                  Most companies don't publish pricing. The table below shows indicative 2025 ranges for a fully
+                  installed, commissioned and certified Brisbane cold room. Your fixed-price quote is confirmed after
+                  on-site measure-up. Variations come from refrigerant choice, condenser sizing, door package, sub-main
+                  electrical and tenancy fitout requirements.
                 </p>
                 <p className="text-steel mt-3 leading-relaxed">
                   Cherry Refrigeration is one of the only Brisbane refrigeration companies publishing fixed installation
@@ -174,10 +175,10 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 function ComparisonTable() {
   const rows = [
     ["Refrigeration + electrical in one team", true, false],
-    ["QBCC + ARC + Master Electricians licensed", true, false],
+    ["Fully licensed refrigeration + electrical scope", true, false],
     ["Fixed-price quote within 24 hours", true, false],
     ["Transparent installed pricing on site", true, false],
-    ["5-year workmanship warranty", true, false],
+    ["Workmanship warranty in writing", true, false],
     ["24/7 emergency response", true, false],
     ["HACCP-ready logbook on every visit", true, false],
     ["Tenancy drawings and council documentation included", true, false],
