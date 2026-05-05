@@ -18,6 +18,7 @@ const config: Config = {
           800: "#061122",
           900: "#040B16",
         },
+        logo: "#1A2547",
         ice: "#F4F8FB",
         cherry: {
           DEFAULT: "#C8102E",

@@ -8,8 +8,8 @@ export function localBusinessSchema() {
     "@id": `${business.url}#business`,
     name: business.name,
     legalName: business.legalName,
-    image: `${business.url}/images/cherry-refrigeration-og.jpg`,
-    logo: `${business.url}/images/logo.png`,
+    image: `${business.url}/images/cherry-refrigeration-logo.png`,
+    logo: `${business.url}/images/cherry-refrigeration-logo.png`,
     url: business.url,
     telephone: business.phoneIntl,
     email: business.email,
@@ -65,7 +65,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: business.name,
     url: business.url,
-    logo: `${business.url}/images/logo.png`,
+    logo: `${business.url}/images/cherry-refrigeration-logo.png`,
     contactPoint: {
       "@type": "ContactPoint",
       telephone: business.phoneIntl,
@@ -136,7 +136,7 @@ export function articleSchema(opts: {
     publisher: {
       "@type": "Organization",
       name: business.name,
-      logo: { "@type": "ImageObject", url: `${business.url}/images/logo.png` },
+      logo: { "@type": "ImageObject", url: `${business.url}/images/cherry-refrigeration-logo.png` },
     },
     mainEntityOfPage: opts.url,
   };
