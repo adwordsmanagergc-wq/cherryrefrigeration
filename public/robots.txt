@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://cherryrefrigeration.com.au
-
-# Sitemaps
-Sitemap: https://cherryrefrigeration.com.au/sitemap.xml
