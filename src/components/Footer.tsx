@@ -62,12 +62,23 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-x py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/60">
           <div>© {new Date().getFullYear()} {business.legalName} — ACN {business.acn}. All rights reserved.</div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link href="/privacy" className="hover:text-white">Privacy</Link>
             <Link href="/terms" className="hover:text-white">Terms</Link>
             <Link href="/emergency-repairs" className="hover:text-white">Emergency</Link>
             <Link href="/sitemap.xml" className="hover:text-white">Sitemap</Link>
           </div>
+        </div>
+        <div className="container-x pb-6 text-xs text-white/50 text-center md:text-right">
+          Website created by{" "}
+          <a
+            href="https://metatapdigital.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/80 hover:text-white underline underline-offset-2"
+          >
+            metatapdigital.com
+          </a>
         </div>
       </div>
     </footer>
