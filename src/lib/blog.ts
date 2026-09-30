@@ -14,6 +14,74 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cool-room-not-cooling-9-causes-and-fixes",
+    title: "Cool Room Not Cooling? 9 Causes and Fixes",
+    description:
+      "The nine most common reasons a Brisbane cool room stops cooling, what to check yourself, and when to call a refrigeration mechanic.",
+    date: "2026-08-15",
+    updated: "2026-09-30",
+    author: "Keith Cherry",
+    category: "Troubleshooting",
+    body: [
+      { copy: "A cool room creeping over 5°C is not always a broken compressor. Nine times out of ten it is one of the causes below, and half of those you can check yourself before you call us." },
+      { heading: "1. Door seal leaking warm air", copy: "Close the door on a piece of A4 paper. If it slides out, the seal is compressed. Warm humid air leaks in, the evaporator ices up, and the room stops holding temp. Fix: replace the seal (about 30 minutes on a hinged door)." },
+      { heading: "2. Iced up evaporator", copy: "Look through the vent inside the room. Solid ice across the coil means the defrost cycle is not running properly. Fix: defrost timer, defrost heater or controller programming. Turning the room off overnight to defrost is a temporary workaround, not a fix." },
+      { heading: "3. Dirty condenser outside", copy: "The condenser sits outside (or on the roof). Leaves, grease and lint on the coil stop it rejecting heat. Fix: coil clean and clearance check. This is on every service visit." },
+      { heading: "4. Refrigerant leak", copy: "Low charge means the compressor cannot pull temp down. Fix: leak detection, repair, pressure test, vacuum, regas with the correct gas. ARC licensed work." },
+      { heading: "5. Fan motor failure", copy: "If the evaporator fan or condenser fan is not turning, the system cannot move heat. Fix: fan motor replacement. Most common models are on the van." },
+      { heading: "6. Faulty controller or thermostat", copy: "If the set point has been bumped, or the probe has drifted, the controller thinks the room is colder than it is. Fix: probe check, controller reset, or replacement." },
+      { heading: "7. Compressor short cycling", copy: "Rapid on-off cycling usually means a pressure switch problem, a low charge, or a contactor about to fail. Fix: diagnosis on-site. Do not keep resetting the breaker." },
+      { heading: "8. Blocked drain", copy: "Water inside the room, or ice building on the floor, usually points to a blocked drain. The condensate has nowhere to go. Fix: clear the drain, replace the drain heater if it has failed." },
+      { heading: "9. Wrong room for the load", copy: "Overloading a chiller with warm stock, or filling every shelf so airflow cannot circulate, will push the room off temp regardless of the plant. Fix: load management, or sometimes a plant upgrade." },
+      { copy: "If your room is over 8°C and stock is at risk, do not wait. Call the 24/7 emergency line on 0432 115 513. Same day response across Greater Brisbane." },
+    ],
+    faqs: [
+      { q: "How quickly should a Brisbane cool room recover after the door is opened?", a: "A healthy chiller should pull back to set point within 5 to 10 minutes of a door open. Slower recovery points to plant sizing, a dirty condenser, refrigerant loss, or a failing compressor." },
+      { q: "Is a cool room the same as a cold room?", a: "Yes. Cool room is the common Australian consumer term. Cold room is more common in industrial or food-safety documents. Same box." },
+    ],
+  },
+
+  {
+    slug: "second-hand-vs-new-cool-room-panels",
+    title: "Second-Hand vs New Cool Room Panels: The Honest Trade-off",
+    description:
+      "When second-hand cool room panels make sense, when they do not, and what to look for on used panels before you commit.",
+    date: "2026-07-04",
+    updated: "2026-09-30",
+    author: "Keith Cherry",
+    category: "Buying Guides",
+    body: [
+      { copy: "Second-hand cool room panels can save you 30 to 50% versus new. But they carry hidden costs: transport, damage, missing fixings, incompatible corners, and panels that no longer match a current door frame. Here is when they make sense." },
+      { heading: "When second-hand works", copy: "Non-critical back-of-house rooms, dry stores that will be converted, staging areas, hire-shop overflow, event or temporary use, and rural sites where transport of new panels is a big fraction of the total cost." },
+      { heading: "When it does not", copy: "Anything with a HACCP audit exposure, freezer rooms below -18°C, coastal installs where corrosion is aggressive, pharmacy or medical storage, and any tenancy where you cannot pull the room apart later to swap panels." },
+      { heading: "What to look for", copy: "Skin corrosion at the base, dents in the core, delamination between skin and foam, moisture entry at panel joints, missing cam locks or damaged cam lock housings, mismatched panel lengths, and above all: whether the door frame is intact and compatible with a current door." },
+      { heading: "The honest maths", copy: "By the time you factor in freight, labour to disassemble and reassemble, replacement seals, new cam locks, and any refrigeration plant that needs to move with the room, second-hand savings often shrink to 10 to 20% versus new. Sometimes that still wins. Just do the numbers on the whole job, not just the panel price." },
+    ],
+  },
+
+  {
+    slug: "cool-room-requirements-food-businesses-queensland",
+    title: "Cool Room Requirements for Food Businesses in Queensland",
+    description:
+      "What the Food Standards Code and Queensland Health actually require of your cool room, and how to stay audit-ready without over-engineering.",
+    date: "2026-06-18",
+    updated: "2026-09-30",
+    author: "Keith Cherry",
+    category: "Compliance",
+    body: [
+      { copy: "If you run a Queensland food business, your cool room is a compliance instrument as much as it is a piece of plant. The Food Standards Code (FSANZ Standard 3.2.2) and Queensland Health both expect specific things. Here is what actually matters on a real audit, not what marketing copy says." },
+      { heading: "1. Temperature", copy: "Potentially hazardous food must be kept at or below 5°C, or above 60°C. Frozen food at -18°C or colder. That is the law. Cool rooms are usually set 0 to 4°C in practice to give a buffer for door opens." },
+      { heading: "2. Documented temperature checks", copy: "You need daily temperature logs. Auditors want signed dated entries. Digital data loggers with export to CSV pass every time. Handwritten logs are fine if they are consistent." },
+      { heading: "3. Probe calibration", copy: "Thermometers used for compliance checks need to be NATA-traceable and calibrated annually. Note the last cal date on the log." },
+      { heading: "4. Corrective actions", copy: "Every temperature excursion needs a documented corrective action: what happened, what you did, what stock was affected. This is where most operators lose marks in audit." },
+      { heading: "5. Maintenance records", copy: "A logbook from your refrigeration mechanic showing scheduled visits, refrigerant handling, and any repairs. Every Cherry Refrigeration visit leaves one." },
+      { heading: "6. Door seals and structural integrity", copy: "Auditors check door seals visually and look for pest ingress points around penetrations. Poor seals are a fail item in a lot of Queensland Health checks." },
+      { heading: "7. Stock rotation and airflow", copy: "Not a plant issue, but included in the audit. Do not block airflow around the evaporator, do not stack stock touching the floor, keep raw and ready-to-eat separated." },
+      { copy: "Cherry Refrigeration builds and services rooms that pass audits first time. If you have an inspection coming up and something feels off, get us to run a pre-audit check." },
+    ],
+  },
+
+  {
     slug: "trusted-cool-room-installation-company-brisbane",
     title: "Trusted Cool Room Installation Company Brisbane: From Design to Install",
     description:

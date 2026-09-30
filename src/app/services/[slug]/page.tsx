@@ -6,6 +6,7 @@ import { services, getService } from "@/lib/services";
 import { serviceContent } from "@/lib/serviceContent";
 import { serviceFaqs } from "@/lib/serviceFaqs";
 import { moneyPageFaqs } from "@/lib/faqs";
+import { getServiceRelated } from "@/lib/serviceRelated";
 import { business } from "@/lib/business";
 import { Hero } from "@/components/Hero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -20,7 +21,9 @@ import { FAQ } from "@/components/FAQ";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CTASection } from "@/components/CTASection";
 import { QuoteCta } from "@/components/QuoteCta";
+import { ServiceRelated } from "@/components/ServiceRelated";
 import { StickyAnchorNav } from "@/components/StickyAnchorNav";
+import { LicensedInsuredStrip } from "@/components/LicensedInsuredStrip";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/schema";
 
 export async function generateStaticParams() {
@@ -69,6 +72,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         ]}
       />
       <Hero h1={s.h1} sub={s.intro} />
+      <LicensedInsuredStrip />
 
       {isMoneyPage && <StickyAnchorNav anchors={moneyAnchors} />}
 
@@ -190,6 +194,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           })}
         </div>
       </section>
+
+      <ServiceRelated {...getServiceRelated(s.slug)} />
 
       <CTASection />
     </>

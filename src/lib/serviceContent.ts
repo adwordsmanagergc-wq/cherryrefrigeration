@@ -163,4 +163,53 @@ export const serviceContent: Record<string, { heading: string; copy: string }[]>
       copy: "Service plan customers get priority breakdown response, typically on site within 2 hours during business hours.",
     },
   ],
+
+  "cool-room-regas-refrigerant-leak-repair-brisbane": [
+    {
+      heading: "Find the leak, fix the leak, prove it is gone",
+      copy: "Refrigerant loss is not just an environmental problem, it is money out the door. Cherry Refrigeration finds leaks with calibrated electronic leak detectors on every flare, braze, coil and access point, fixes them with certified brazing and new mechanical joints, then pressure tests with dry nitrogen and vacuums the system to a proper deep vacuum before recharge.",
+    },
+    {
+      heading: "Right gas, first time",
+      copy: "Low GWP refrigerants by default. R448A or R449A on medium temp systems, R454C on low temp where plant supports it, R513A as a drop in for many R134a chillers. If you are still running R404A or R22, we quote the retrofit versus the plant replacement so you can make a numbers-based call.",
+    },
+    {
+      heading: "Documented for HACCP and ARC",
+      copy: "Every regas leaves a written gas log with quantity, gas type, technician licence and pressure results. That is what your auditor and the ARC records both want.",
+    },
+  ],
+
+  "cool-room-door-seal-replacement-brisbane": [
+    {
+      heading: "The 30 second seal test",
+      copy: "Close the door on a piece of A4 paper. Try to slide it out. If it slides easily, the seal is compressed and warm humid air is leaking past. Every service visit includes a free 30 second seal test, so you always know where your seals stand.",
+    },
+    {
+      heading: "Seals we stock",
+      copy: "Every common Australian door profile is on the van, plus most imports. Hinged, sliding, freezer-rated heated seals with the correct heater wire, and PVC strip curtain replacements. Standard door swap is a 30 minute fit time on a scheduled visit.",
+    },
+    {
+      heading: "Why door seals matter more than compressors",
+      copy: "Bad seals cost more than just energy. They let warm humid air in, your evaporator ices up, defrost cycles run longer, and your door frame heater wire works overtime. The cascade gets expensive. Sealed doors and healthy frames are the cheapest efficiency upgrade on any cool room.",
+    },
+  ],
+
+  "commercial-fridge-repairs-brisbane": [
+    {
+      heading: "One team, every brand",
+      copy: "Cherry Refrigeration services and repairs commercial fridges of every kind: display cabinets, drink fridges, bain-maries, prep tables, upright chillers and freezers, plus supermarket display cases and multi-decks. Australian and imported brands.",
+    },
+    {
+      heading: "What we actually fix",
+      copy: "Not cooling, iced-up evaporator, hot cabinet, compressor short cycling, controller fault, PCB replacement, fan motor swap, door seal replacement, refrigerant leak detection, condenser cleaning and full pull-down testing.",
+    },
+    {
+      heading: "Diagnosis fixed, repair fixed",
+      copy: "Flat rate service call disclosed on the phone, then a written fixed repair quote before any further work. The service call is credited toward the repair if you proceed on the day.",
+    },
+    {
+      heading: "Refrigerant retrofits and low-GWP work",
+      copy: "If your fridge is on R22 or R404A, we will quote the retrofit versus a plant replacement with real numbers on both. Under Australia's HFC phase-down, running on legacy gas gets more expensive every year.",
+    },
+  ],
 };

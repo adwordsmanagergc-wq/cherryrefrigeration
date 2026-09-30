@@ -242,6 +242,75 @@ export const services: Service[] = [
     related: ["cool-room-repairs-brisbane", "commercial-refrigeration-brisbane", "cool-room-installation-brisbane"],
     alternateNames: ["Cold Room Maintenance Brisbane", "Coolroom Servicing Brisbane"],
   },
+  {
+    slug: "cool-room-regas-refrigerant-leak-repair-brisbane",
+    shortTitle: "Cool Room Regas & Leaks",
+    title: "Cool Room Regas & Refrigerant Leak Repair Brisbane",
+    h1: "Cool Room Regas and Refrigerant Leak Repair Brisbane",
+    metaTitle: "Cool Room Regas & Leak Repair Brisbane | Cherry Refrigeration",
+    metaDescription:
+      "Cool room refrigerant leak detection and regas across Brisbane. ARC licensed, all gases including R448A, R449A, R454C. Call 0432 115 513.",
+    intro:
+      "Refrigerant leaks are the number one hidden cost in a cool room. Cherry Refrigeration finds them fast with electronic leak detectors, repairs them properly, and regasses with the correct low-GWP refrigerant for your plant.",
+    bullets: [
+      "Electronic leak detection on flare joints, brazes and coils",
+      "Full pressure test and vacuum before recharge",
+      "Low-GWP regas: R448A, R449A, R454C, R513A",
+      "Legacy retrofits: R22, R404A, R134a",
+      "Documented gas log for HACCP and ARC compliance",
+      "ARC licensed refrigerant handling on every visit",
+    ],
+    body: [],
+    faqs: [],
+    related: ["cool-room-repairs-brisbane", "cool-room-maintenance-brisbane", "commercial-refrigeration-brisbane"],
+    alternateNames: ["Cold Room Regas Brisbane", "Refrigerant Leak Repair Brisbane"],
+  },
+  {
+    slug: "cool-room-door-seal-replacement-brisbane",
+    shortTitle: "Cool Room Door Seals",
+    title: "Cool Room Door Seal Replacement Brisbane",
+    h1: "Cool Room Door Seal Replacement Brisbane",
+    metaTitle: "Cool Room Door Seal Replacement Brisbane | Cherry Refrigeration",
+    metaDescription:
+      "Cool room door seal replacement in Brisbane. Every common profile in stock. Same-day fit on scheduled visits. Call 0432 115 513.",
+    intro:
+      "Door seals are the cheapest part of your cool room and the biggest source of energy loss when they fail. Cherry Refrigeration carries seals for every common Australian door profile and fits replacements on scheduled visits within days.",
+    bullets: [
+      "Every common Australian seal profile in stock",
+      "Hinged, sliding and heated freezer door seals",
+      "30 minute fit time on standard doors",
+      "Anti-condensation heater wire replacement",
+      "Free 30 second door seal test on any service visit",
+      "Optional door and frame audit as part of a service plan",
+    ],
+    body: [],
+    faqs: [],
+    related: ["cool-room-doors-brisbane", "cool-room-maintenance-brisbane", "cool-room-repairs-brisbane"],
+    alternateNames: ["Cold Room Door Seal Replacement Brisbane"],
+  },
+  {
+    slug: "commercial-fridge-repairs-brisbane",
+    shortTitle: "Commercial Fridge Repairs",
+    title: "Commercial Fridge Repairs Brisbane",
+    h1: "Commercial Fridge Repairs Brisbane",
+    metaTitle: "Commercial Fridge Repairs Brisbane | All Brands",
+    metaDescription:
+      "Commercial fridge, display cabinet and drink fridge repairs in Brisbane. All brands, same day response, ARC licensed. Call 0432 115 513.",
+    intro:
+      "Cherry Refrigeration services and repairs commercial fridges, display cabinets, bain-maries and drink fridges across Brisbane. Every make, every brand, ARC licensed, same day response where possible.",
+    bullets: [
+      "Display fridges, drink fridges and bain-maries",
+      "Same-day Brisbane response",
+      "All makes and imported brands",
+      "PCB, controller, fan motor and evaporator repairs",
+      "Refrigerant leak detection and low-GWP retrofit",
+      "HACCP-ready logbook entry every visit",
+    ],
+    body: [],
+    faqs: [],
+    related: ["commercial-refrigeration-brisbane", "cool-room-repairs-brisbane", "cool-room-maintenance-brisbane"],
+    alternateNames: ["Commercial Refrigerator Repairs Brisbane", "Display Fridge Repairs Brisbane"],
+  },
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);

@@ -5,12 +5,13 @@ import { MapPin, Clock, Phone } from "lucide-react";
 import { locations, getLocation } from "@/lib/locations";
 import { services } from "@/lib/services";
 import { CITY_SERVICE_SLUG_LIST } from "@/lib/cityServiceCombos";
-import { business, tel } from "@/lib/business";
+import { siteConfig, tel } from "@/lib/siteConfig";
 import { Hero } from "@/components/Hero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { QuoteForm } from "@/components/QuoteForm";
-import { JsonLd, serviceSchema } from "@/lib/schema";
+import { JsonLd, serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { localAngles } from "@/lib/localAngles";
 
 export async function generateStaticParams() {
   return locations.map((l) => ({ slug: l.slug }));
@@ -22,36 +23,60 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: l.metaTitle,
     description: l.metaDescription,
-    alternates: { canonical: `${business.url}/locations/${l.slug}` },
+    alternates: { canonical: `${siteConfig.siteUrl}/locations/${l.slug}` },
   };
 }
 
 export default function LocationPage({ params }: { params: { slug: string } }) {
   const l = getLocation(params.slug);
   if (!l) return notFound();
+  const angle = localAngles[l.slug];
   const mapEmbed = `https://www.google.com/maps?q=${l.geo.lat},${l.geo.lng}&z=11&output=embed`;
+  const nearby = locations.filter((x) => x.slug !== l.slug);
+  const breadcrumbItems = [
+    { name: "Home", href: "/" },
+    { name: "Locations", href: `/locations/${l.slug}` },
+    { name: l.city, href: `/locations/${l.slug}` },
+  ];
 
   return (
     <>
-      <JsonLd data={serviceSchema({ name: `Cool Room Installation ${l.city}`, description: l.metaDescription, slug: `locations/${l.slug}`, area: l.city })} />
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: `Cool Room Services ${l.city}`,
+            description: l.metaDescription,
+            slug: `locations/${l.slug}`,
+            area: l.city,
+            alternateName: [`Cold Room Services ${l.city}`, `Coolroom Services ${l.city}`],
+          }),
+          breadcrumbSchema(breadcrumbItems.map((b) => ({ name: b.name, url: siteConfig.siteUrl + b.href }))),
+        ]}
+      />
       <Hero eyebrow={`Service area: ${l.city}`} h1={l.h1} sub={l.intro} />
-      <Breadcrumbs items={[{ name: "Locations", href: "/locations/brisbane-cbd" }, { name: l.city, href: `/locations/${l.slug}` }]} />
+      <Breadcrumbs items={breadcrumbItems.slice(1)} />
 
       <section className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 space-y-8">
           <div>
-            <h2 className="h3 mb-3">Cool room installation in {l.city}</h2>
+            <h2 className="h3 mb-3">Cool room and refrigeration services in {l.city}</h2>
             <p className="text-steel leading-relaxed">
-              {l.city} is a working part of Cherry Refrigeration's weekly route. Whether you're a hospitality operator
-              fitting out a new tenancy, a butcher upgrading to a carcass-rated room, or a logistics operator commissioning
-              a distribution-scale freezer, we install, service and certify across {l.city} every week — without the
-              regional surcharge most installers tack on.
+              {l.city} is a working part of Cherry Refrigeration's weekly route. Whether you are a hospitality operator
+              fitting out a new tenancy, a butcher upgrading to a carcass-rated room, or a logistics operator
+              commissioning a distribution-scale freezer, we install, service and certify across {l.city} every week,
+              without the regional surcharge most installers tack on.
             </p>
-            <p className="text-steel leading-relaxed mt-4">
-              Every {l.city} install is delivered by Cherry Refrigeration's in-house licensed crew. Refrigeration,
-              electrical, panels and doors all under one quote, one trade and one warranty. Where coastal humidity or
-              corrosive salt-air is in play, we spec marine-grade condensers and stainless skin panels as standard.
-            </p>
+            {angle && (
+              <>
+                <p className="text-steel leading-relaxed mt-4">
+                  Our {l.city} customer mix is heavy on {angle.customers}. Recent work has spanned {angle.landmarks}.
+                </p>
+                <p className="text-steel leading-relaxed mt-4">
+                  On the technical side, {angle.climateNote}. Refrigeration, electrical, panels and doors are all
+                  delivered under one Cherry Refrigeration quote, one trade and one warranty.
+                </p>
+              </>
+            )}
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
@@ -63,19 +88,26 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
             </div>
             <div className="card p-5">
               <div className="flex gap-2 items-center text-cherry text-sm font-semibold mb-2">
-                <MapPin className="h-4 w-4" /> Nearby suburbs
+                <MapPin className="h-4 w-4" /> Nearby suburbs we cover
               </div>
               <p className="text-sm text-steel">{l.nearbySuburbs.join(" • ")}</p>
             </div>
           </div>
 
-          {l.sampleProject && (
-            <div className="card p-6 bg-navy text-white">
-              <div className="text-xs uppercase tracking-widest text-frost font-semibold mb-1">Sample project</div>
-              <h3 className="font-display font-bold text-xl">{l.sampleProject.title}</h3>
-              <p className="text-white/85 mt-3 leading-relaxed">{l.sampleProject.copy}</p>
-            </div>
-          )}
+          <div className="card p-6 bg-ice">
+            <div className="text-xs uppercase tracking-widest text-cherry font-semibold mb-2">Recent {l.city} project</div>
+            {l.sampleProject ? (
+              <>
+                <h3 className="font-display font-bold text-navy text-lg">{l.sampleProject.title}</h3>
+                <p className="text-sm text-steel mt-2">{l.sampleProject.copy}</p>
+              </>
+            ) : (
+              <p className="text-sm text-steel">
+                TODO(KEITH): send a short write-up of a recent {l.city} job (title, room size, temperature, panel type,
+                photos) and it will appear here.
+              </p>
+            )}
+          </div>
 
           <div className="aspect-[16/9] rounded-xl overflow-hidden border border-navy/10 bg-white">
             <iframe
@@ -104,11 +136,23 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
 
+          <div>
+            <h2 className="h3 mb-3">Nearby areas we also cover</h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {nearby.map((n) => (
+                <Link key={n.slug} href={`/locations/${n.slug}`} className="card p-3 group">
+                  <div className="font-display font-bold text-navy text-sm group-hover:text-cherry">{n.city}</div>
+                  <div className="text-[11px] text-steel">{n.region}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="card p-6 bg-cherry text-white">
             <h3 className="font-display font-bold text-xl mb-2">Cool room down in {l.city}?</h3>
-            <p className="text-white/90 text-sm mb-4">24/7 emergency line for total breakdowns. Same-day breakdown response across {l.region} during business hours.</p>
+            <p className="text-white/90 text-sm mb-4">24/7 emergency line for total breakdowns. Same-day response across {l.region} during business hours.</p>
             <a href={tel} className="inline-flex items-center gap-2 bg-white text-cherry font-bold px-4 py-2 rounded-md hover:bg-ice">
-              <Phone className="h-4 w-4" /> Call {business.phone}
+              <Phone className="h-4 w-4" /> Call {siteConfig.phone}
             </a>
           </div>
         </div>

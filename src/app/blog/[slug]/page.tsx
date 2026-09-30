@@ -6,6 +6,7 @@ import { business } from "@/lib/business";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { FAQ } from "@/components/FAQ";
+import { AuthorBio } from "@/components/AuthorBio";
 import { JsonLd, articleSchema, faqSchema } from "@/lib/schema";
 
 export async function generateStaticParams() {
@@ -28,7 +29,14 @@ export default function PostPage({ params }: { params: { slug: string } }) {
   const url = `${business.url}/blog/${p.slug}`;
 
   const schemas: object[] = [
-    articleSchema({ title: p.title, description: p.description, date: p.date, author: p.author, url }),
+    articleSchema({
+      title: p.title,
+      description: p.description,
+      date: p.date,
+      updated: p.updated,
+      author: p.author,
+      url,
+    }),
   ];
   if (p.faqs && p.faqs.length) schemas.push(faqSchema(p.faqs));
 
@@ -43,6 +51,12 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           By {p.author}
           {p.reviewer ? ` • Reviewed by ${p.reviewer}` : ""} •{" "}
           {new Date(p.date).toLocaleDateString("en-AU", { year: "numeric", month: "long", day: "numeric" })}
+          {p.updated && p.updated !== p.date && (
+            <>
+              {" "}<span className="text-navy/70">·</span>{" "}
+              <span>Updated {new Date(p.updated).toLocaleDateString("en-AU", { year: "numeric", month: "long", day: "numeric" })}</span>
+            </>
+          )}
         </div>
 
         <div className="space-y-5 text-steel leading-relaxed text-lg">
@@ -80,6 +94,8 @@ export default function PostPage({ params }: { params: { slug: string } }) {
             </ul>
           </section>
         )}
+
+        <AuthorBio name={p.author} />
 
         <div className="mt-12 pt-8 border-t border-navy/10">
           <div className="font-display font-bold text-navy mb-3">Related posts</div>

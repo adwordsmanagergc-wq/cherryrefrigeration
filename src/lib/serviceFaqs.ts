@@ -69,4 +69,24 @@ export const serviceFaqs: Record<string, { q: string; a: string }[]> = {
     { q: "How often should I service?", a: "Quarterly is right for most cafes and small kitchens. Monthly for high throughput supermarkets, butchers, seafood, and pharmacy sites." },
     { q: "Do plan customers get priority?", a: "Yes. Typically on site within 2 hours during business hours for service plan customers." },
   ],
+
+  "cool-room-regas-refrigerant-leak-repair-brisbane": [
+    { q: "How do you actually find a leak?", a: "Calibrated electronic leak detector on every flare, braze, coil access point and Schrader. Dry nitrogen pressure test confirms the repair before recharge." },
+    { q: "Which refrigerants do you carry?", a: "R448A, R449A, R454C, R513A, R134a. Legacy R404A and R22 for retrofit and service. All handled under an ARC Refrigerant Trading Authorisation." },
+    { q: "Is regas covered by an ARC gas log?", a: "Yes. Every regas leaves a written gas log with quantity, gas type, technician licence and pressure results. Kept for your HACCP records and ARC reporting." },
+    { q: "How much does a cool room regas cost?", a: "Custom quoted after diagnosis. Cost depends on room size, refrigerant type and whether a leak has to be repaired first. Fixed quote before any work." },
+  ],
+
+  "cool-room-door-seal-replacement-brisbane": [
+    { q: "How long does a door seal last?", a: "5 to 8 years on a cool room, 3 to 5 on a freezer where the heater wire bakes the seal faster. On a busy kitchen door, halve those numbers." },
+    { q: "How long does it take to fit a new seal?", a: "About 30 minutes on a standard hinged cool room door. Sliding and freezer doors take longer because of heater wire integration." },
+    { q: "Can you replace seals on any brand of door?", a: "Yes. We carry every common Australian profile in stock and can source imports quickly." },
+  ],
+
+  "commercial-fridge-repairs-brisbane": [
+    { q: "How fast can you come out?", a: "Same day across Greater Brisbane Mon to Sat. 24/7 emergency line for total breakdowns." },
+    { q: "Do you service every brand?", a: "Yes. All major Australian and imported commercial brands, including display cabinets, prep tables, drink fridges and multi-decks." },
+    { q: "Is the service call fee credited if I proceed?", a: "Yes. The flat rate service call is credited toward the repair cost if you proceed on the day." },
+    { q: "Can you retrofit an old R22 or R404A fridge?", a: "Yes, where the plant supports it. We quote the retrofit versus full plant replacement side by side so you can make a numbers-based decision." },
+  ],
 };

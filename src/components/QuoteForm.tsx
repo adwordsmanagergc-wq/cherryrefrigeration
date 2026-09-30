@@ -82,7 +82,18 @@ export function QuoteForm({ multiStep = false }: { multiStep?: boolean }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="card p-6 sm:p-8 space-y-4" noValidate>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      onFocus={(e) => {
+        const form = e.currentTarget as HTMLFormElement;
+        if (form && form.dataset.started !== "true") {
+          (window as any).gtag?.("event", "quote_start", { source: multiStep ? "multi_step" : "single_step" });
+          form.dataset.started = "true";
+        }
+      }}
+      className="card p-6 sm:p-8 space-y-4"
+      noValidate
+    >
       <div className="flex items-center justify-between">
         <h3 className="h3">Get a free fixed-price quote</h3>
         {multiStep && <span className="text-xs text-steel">Step {step + 1} / {steps.length}</span>}
