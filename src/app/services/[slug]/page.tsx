@@ -42,7 +42,7 @@ const moneyAnchors = [
   { id: "overview", label: "Overview" },
   { id: "process", label: "Process" },
   { id: "types", label: "Cold room types" },
-  { id: "pricing", label: "Pricing" },
+  { id: "pricing", label: "Sizing" },
   { id: "projects", label: "Projects" },
   { id: "coverage", label: "Coverage" },
   { id: "faq", label: "FAQ" },
@@ -120,19 +120,18 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             <div className="bg-ice rounded-2xl px-5 sm:px-6 lg:px-8 py-10 lg:py-14">
               <div className="grid lg:grid-cols-2 gap-10 items-start">
                 <div>
-                  <span className="badge-cherry">Cost guide</span>
-                  <h2 className="h2 mt-3">Cold room installation cost in Brisbane</h2>
+                  <span className="badge-cherry">Sizing & quotes</span>
+                  <h2 className="h2 mt-3">Typical Brisbane cold room sizes</h2>
                   <p className="lede mt-3">
-                    Most companies don't publish pricing. The table below shows indicative 2025 ranges for a fully
-                    installed, commissioned and certified Brisbane cold room. Your fixed-price quote is confirmed after
-                    on-site measure-up.
+                    Every install is custom-quoted after an on-site measure-up — because no two cold rooms are the same.
+                    Below is a quick reference for the sizes and temperatures we install most.
                   </p>
                   <p className="text-steel mt-3 leading-relaxed">
-                    Cherry Refrigeration is one of the only Brisbane refrigeration companies publishing indicative
-                    installation pricing — because you deserve an honest number to budget against.
+                    Once we measure on-site we issue a written fixed-price quote in 24 business hours. The number you
+                    sign is the number you pay — no scope creep, no surprise extras.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
-                    <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-primary">Read full cost guide</Link>
+                    <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-primary">What affects your quote</Link>
                     <QuoteCta className="btn-outline">Get a fixed quote</QuoteCta>
                   </div>
                 </div>

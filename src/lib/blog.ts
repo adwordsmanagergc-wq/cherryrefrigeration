@@ -113,17 +113,17 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "cold-room-installation-cost-brisbane-2025",
-    title: "How Much Does a Cold Room Cost to Install in Brisbane (2025 Guide)",
+    title: "What Affects Cold Room Install Cost in Brisbane",
     description:
-      "An indicative guide to cold room installation costs in Brisbane in 2025 — small, medium, freezer and industrial — and the variables that actually move the price.",
+      "Every Brisbane cold room is priced differently — here's what actually moves the number, and why Cherry Refrigeration quotes each job on-site.",
     date: "2025-09-08",
     author: "Keith Cherry",
-    category: "Pricing",
+    category: "Buying Guides",
     body: [
-      "If you've called three Brisbane refrigeration companies for a cold room quote, you've probably had three wildly different numbers — sometimes a $4,000 spread on the same room. Here's why, and indicative ranges for a Brisbane cold room in 2025. These are typical industry ranges only — your fixed-price quote will be confirmed after on-site measure-up.",
-      "A small 3m × 3m × 2.4m chiller for a cafe sits between $4,000 and $8,000 installed. A medium 5m × 4m × 2.7m for a restaurant or grocer is $8,000–$15,000. A 5m × 5m × 2.7m freezer at -18°C runs $12,000–$25,000, and industrial-scale rooms start around $25,000 and run well past $40,000 once racking, doors and three-phase plant come in.",
-      "What moves the price most? Panel thickness (100mm vs 150mm), refrigerant choice, condenser sizing for our climate, the door package, electrical sub-mains, and whether the floor needs an insulated panel or can sit on slab. Tenancy fitout requirements and council approvals can add 5–15% on top of the base build.",
-      "The fixed-price quote we issue includes everything — design, panels, refrigeration, electrical, doors, commissioning and certification — so you know the final number before we order panels.",
+      "If you've called three Brisbane refrigeration companies for a cold room quote, you've probably had three different numbers. The variation isn't usually margin — it's scope. Here's what actually moves the price on a cold room install, so you know what to expect before we walk on-site.",
+      "Six variables drive most of the difference between quotes: panel thickness (100mm vs 150mm), refrigerant choice, condenser sizing for our climate, the door package, electrical sub-mains, and whether the floor needs an insulated panel or can sit on slab. Tenancy fitout requirements and council approvals sit on top.",
+      "Cherry Refrigeration custom-quotes every install after an on-site measure-up. Because no two cold rooms are the same — floor plan, stock throughput, existing electrical, door traffic, tenancy access — we don't publish prices. Instead you get a written fixed-price quote inside 24 business hours that covers design, panels, refrigeration, electrical, doors, commissioning and certification.",
+      "The number you sign is the number you pay. No add-ons, no scope creep. If you want an accurate figure for your specific site, submit the quick quote form and Keith will book in a free assessment.",
     ],
   },
   {
@@ -195,7 +195,7 @@ export const blogPosts: BlogPost[] = [
     category: "Troubleshooting",
     body: [
       "Cold room creeping up over 5°C? Run this in order before you call.",
-      "1. Check the door seal — close on a $5 note, pull it out. If it slides, the seal's gone. 2. Check the condenser coil outside — clean? clear of leaves and lint? 3. Check the evaporator inside — iced up? 4. Check the thermostat set point — has someone bumped it? 5. Listen to the compressor — running? cycling on/off rapidly?",
+      "1. Check the door seal — close on a piece of paper, pull it out. If it slides, the seal's gone. 2. Check the condenser coil outside — clean? clear of leaves and lint? 3. Check the evaporator inside — iced up? 4. Check the thermostat set point — has someone bumped it? 5. Listen to the compressor — running? cycling on/off rapidly?",
       "Iced-up evaporator usually means defrost timer or heater failure. Rapid cycling usually means refrigerant pressure issue. Hot condenser fan usually means motor on its way out.",
       "If you've got temp creeping past 8°C and stock at risk, call us. Same-day Brisbane response, 24/7 emergency line.",
     ],

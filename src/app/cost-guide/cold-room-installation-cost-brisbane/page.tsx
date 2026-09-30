@@ -8,12 +8,11 @@ import { CTASection } from "@/components/CTASection";
 import { QuoteForm } from "@/components/QuoteForm";
 import { JsonLd, articleSchema, faqSchema } from "@/lib/schema";
 import { business } from "@/lib/business";
-import { EnergyCalculator } from "@/components/EnergyCalculator";
 
 export const metadata: Metadata = {
-  title: "Cold Room Installation Cost Brisbane (2025 Guide) | Cherry Refrigeration",
+  title: "Cold Room Cost Guide Brisbane — What Affects Your Quote | Cherry Refrigeration",
   description:
-    "Real Brisbane cold room installation costs in 2025 — small chiller to industrial freezer, what changes the price, and how to budget. Free fixed quotes.",
+    "What actually affects the cost of a cold room install in Brisbane — panel thickness, refrigerant, door package, electrical and more. Every quote is custom.",
   alternates: { canonical: `${business.url}/cost-guide/cold-room-installation-cost-brisbane` },
 };
 
@@ -21,28 +20,28 @@ const url = `${business.url}/cost-guide/cold-room-installation-cost-brisbane`;
 
 const costFaqs = [
   {
-    q: "How much does a small cafe cold room cost in Brisbane?",
-    a: "A 3m × 3m × 2.4m walk-in chiller for a cafe runs $4,000–$8,000 fully installed in Brisbane. Variations come from condenser sizing, panel thickness, door type and electrical sub-main work.",
+    q: "Why don't you publish prices on the website?",
+    a: "Because no two cold rooms are the same. Panel thickness, refrigerant choice, door package, electrical scope and tenancy access all move the number. We custom-quote every job after an on-site measure-up, so you get an accurate fixed price rather than a range you have to guess against.",
   },
   {
-    q: "How much does a freezer room cost in Brisbane?",
-    a: "A standard 5m × 5m × 2.7m freezer at -18°C runs $12,000–$25,000 installed. Larger -22°C industrial rooms with 150mm panels and oversized condensers run $25,000–$40,000 and beyond.",
-  },
-  {
-    q: "What changes the price most?",
-    a: "In rough order of impact: panel thickness, refrigerant choice, condenser sizing, door package, electrical sub-mains, and whether a council application is required.",
+    q: "What actually affects my cold room cost?",
+    a: "The biggest levers are panel thickness (100mm vs 150mm), refrigerant choice, condenser sizing for our Queensland climate, door package (hinged vs sliding vs heated freezer doors), and electrical sub-mains work. Tenancy conditions, council requirements and after-hours access can add on top.",
   },
   {
     q: "Are your quotes fixed?",
     a: "Yes — once we measure on site, the quote is fixed for the agreed scope. The only variations are client-requested scope changes, signed off in writing.",
   },
   {
-    q: "Do you charge for site visits or design?",
-    a: "Free on-site quote and design within Greater Brisbane. Design is included in the install package if you proceed.",
+    q: "How long does the quote take?",
+    a: "Free on-site assessment, then a written fixed-price quote in your inbox within 24 business hours.",
+  },
+  {
+    q: "Do you charge for the site visit or design?",
+    a: "No — on-site assessment and design work is included in the install package.",
   },
   {
     q: "Can I finance a cold room install?",
-    a: "Yes — we work with several commercial equipment financiers and can arrange a referral. Most operators finance the install and pay it off from the running cost savings.",
+    a: "Yes — we work with several commercial equipment financiers and can arrange a referral. Many operators finance the install and pay it off from the running-cost savings on modern efficient plant.",
   },
 ];
 
@@ -52,7 +51,7 @@ export default function Page() {
       <JsonLd
         data={[
           articleSchema({
-            title: "Cold Room Installation Cost in Brisbane — 2025 Guide",
+            title: "Cold Room Cost Guide Brisbane — What Affects Your Quote",
             description: metadata.description as string,
             date: "2025-09-01",
             author: "Keith Cherry",
@@ -62,58 +61,57 @@ export default function Page() {
         ]}
       />
       <Hero
-        eyebrow="2025 Cost Guide"
-        h1="Cold Room Installation Cost in Brisbane — 2025"
-        sub="An indicative guide to Brisbane cold room installation costs in 2025 — small cafe walk-in to industrial freezer, plus the variables that move the price. Your fixed-price quote is confirmed after on-site measure-up."
+        eyebrow="Cost Guide"
+        h1="What actually affects the cost of a Brisbane cold room"
+        sub="Every Cherry Refrigeration cold room is custom-quoted after an on-site measure-up. Here's what moves the number — so you know what to expect before we visit."
       />
       <Breadcrumbs items={[{ name: "Cost guide", href: "/cost-guide/cold-room-installation-cost-brisbane" }]} />
 
       <article className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 space-y-10">
           <section>
-            <h2 className="h3 mb-3">Brisbane cold room pricing at a glance (2025)</h2>
+            <h2 className="h3 mb-3">Typical Brisbane cold room sizes we install</h2>
             <PricingTable />
             <p className="text-xs text-steel mt-3">
-              Prices are fully installed and commissioned within Greater Brisbane, and include refrigeration, electrical
-              sub-circuit, standard door package, panels, commissioning and certification.
+              A quick reference for size, temperature and typical use. Your quote is based on the exact spec we measure
+              on site — no two rooms are alike, so we don't publish prices.
             </p>
           </section>
 
           <section>
-            <h2 className="h3 mb-3">What actually moves the price?</h2>
+            <h2 className="h3 mb-3">What actually affects your cold room cost</h2>
             <p className="text-steel leading-relaxed mb-4">
-              If you call three Brisbane refrigeration companies for a cold room quote you'll often get three wildly
-              different numbers — sometimes a $4,000 spread on the same room. The variation isn't usually about margin.
-              It's about scope. Here are the variables, ranked by how much they change the price.
+              Call three Brisbane refrigeration companies and you'll often get three different numbers — the difference
+              is scope, not margin. Here are the variables, in rough order of impact on the final quote.
             </p>
             <ol className="space-y-3 text-steel list-decimal pl-5">
-              <li><strong className="text-navy">Panel thickness.</strong> 100mm vs 150mm. 150mm panels are non-negotiable for freezer rooms and add roughly 10–15% to panel cost on big rooms.</li>
+              <li><strong className="text-navy">Panel thickness.</strong> 100mm vs 150mm. 150mm panels are non-negotiable for freezer rooms and add materially to panel cost on larger rooms.</li>
               <li><strong className="text-navy">Refrigerant choice.</strong> R448A and R449A are now standard for new medium-temp installs. Low-temp R454C is becoming standard. Plant cost varies with refrigerant compatibility.</li>
-              <li><strong className="text-navy">Condenser sizing for our climate.</strong> Brisbane summers are unforgiving — undersized condensers struggle in February. We oversize to 38°C ambient. That sometimes adds 8–12% versus a "spec sheet" install.</li>
-              <li><strong className="text-navy">Door package.</strong> A simple solid hinged door is cheap. Heated freezer doors, glass-view doors, and rapid-roll traffic doors add up fast on multi-door rooms.</li>
-              <li><strong className="text-navy">Electrical sub-mains.</strong> If your switchboard or sub-main can't take the new load, you'll need three-phase upgrades. We do this in-house — but it's still a real cost.</li>
-              <li><strong className="text-navy">Tenancy and council requirements.</strong> Body corp permits, after-hours installs, council approvals, hoist hire and goods-lift bookings can add 5–15% on top of base build.</li>
+              <li><strong className="text-navy">Condenser sizing for our climate.</strong> Brisbane summers are unforgiving — undersized condensers struggle in February. We oversize to 38°C ambient, which is a small cost premium versus a catalogue "spec sheet" install.</li>
+              <li><strong className="text-navy">Door package.</strong> A simple solid hinged door is the low end. Heated freezer doors, glass-view doors and rapid-roll traffic doors add up on multi-door rooms.</li>
+              <li><strong className="text-navy">Electrical sub-mains.</strong> If your switchboard or sub-main can't take the new load, you'll need three-phase upgrades. We do this in-house — but it's still real scope.</li>
+              <li><strong className="text-navy">Tenancy and council requirements.</strong> Body corp permits, after-hours installs, council approvals, hoist hire and goods-lift bookings can add meaningfully on top of the base build.</li>
             </ol>
           </section>
 
           <section>
             <h2 className="h3 mb-3">Running cost matters more than install cost</h2>
             <p className="text-steel leading-relaxed">
-              A cold room runs 24/7 for 10–15 years. Even a small inefficiency compounds into thousands of dollars per
-              year. The cheapest install is rarely the cheapest cold room. Below is a quick estimator — pop in your
-              dimensions and see roughly what your room would cost to run.
+              A cold room runs 24/7 for 10–15 years. Even a small inefficiency compounds over that time. The cheapest
+              install is rarely the cheapest cold room. Our standard package targets a 25–40% reduction in running cost
+              versus a 10-year-old install, through 150mm panels on freezer rooms, EC-fan evaporators, variable-speed
+              condensers and tight door management.
             </p>
-            <div className="mt-5"><EnergyCalculator /></div>
           </section>
 
           <section>
-            <h2 className="h3 mb-3">How Cherry Refrigeration prices a cold room</h2>
-            <p className="text-steel leading-relaxed">
-              We measure on site. We produce a CAD floor plan and a heat-load calculation. We size the refrigeration
-              and electrical scope. We issue a single fixed-price quote — refrigeration, electrical, panels, doors,
-              commissioning, certification and 30-day tune-up included. No add-ons after the fact. The number you
-              sign is the number you pay.
-            </p>
+            <h2 className="h3 mb-3">How Cherry Refrigeration quotes a cold room</h2>
+            <ol className="space-y-2 text-steel list-decimal pl-5">
+              <li>Free on-site assessment. Keith measures the space and asks about your stock, throughput and growth.</li>
+              <li>CAD floor plan, heat-load calc and refrigeration + electrical scope produced in-house.</li>
+              <li>Single fixed-price quote in writing within 24 business hours — refrigeration, electrical, panels, doors, commissioning, certification and a 30-day tune-up all included.</li>
+              <li>No add-ons after the fact. The number you sign is the number you pay.</li>
+            </ol>
           </section>
 
           <section>
@@ -125,13 +123,13 @@ export default function Page() {
         <aside id="quote" className="lg:sticky lg:top-24 self-start space-y-5 scroll-mt-24">
           <QuoteForm />
           <div className="card p-5">
-            <div className="font-display font-bold text-navy mb-2">Why operators trust our pricing</div>
+            <div className="font-display font-bold text-navy mb-2">Why operators trust our quotes</div>
             <ul className="space-y-2 text-sm text-steel">
-              <li>• Fixed-price quote in 24 hours</li>
-              <li>• Published Brisbane pricing</li>
-              <li>• Refrigeration + electrical in one quote</li>
+              <li>• Free on-site assessment</li>
+              <li>• Fixed-price quote in writing, in 24 hours</li>
+              <li>• Refrigeration + electrical in one number</li>
               <li>• Workmanship warranty in writing</li>
-              
+              <li>• No hidden extras — signed scope is the scope</li>
             </ul>
           </div>
           <div className="card p-5">

@@ -26,14 +26,14 @@ export default function HomePage() {
       <section className="container-x py-14 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <span className="badge-cherry">Transparent pricing</span>
-            <h2 className="h2 mt-3">Cold room installation cost in Brisbane</h2>
+            <span className="badge-cherry">Cold room sizing</span>
+            <h2 className="h2 mt-3">Typical Brisbane cold room sizes</h2>
             <p className="lede mt-3">
-              Most refrigeration companies don't publish pricing — we do. Here's an indicative range for a Brisbane
-              cold room install in 2025, from a small cafe walk-in through to industrial-scale combi rooms.
+              Every cold room is custom-built and custom-quoted — here's a quick size and temperature reference for
+              the rooms we install most often across Brisbane and SE Queensland.
             </p>
             <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-outline mt-6">
-              Read the full cost guide
+              What affects your quote
             </Link>
           </div>
           <PricingTable />

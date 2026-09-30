@@ -5,7 +5,7 @@ export const moneyPageFaqs = [
   },
   {
     q: "How much does a cold room cost in Brisbane?",
-    a: "A small 3m × 3m × 2.4m cold room runs $4,000–$8,000 installed. A medium 5m × 4m × 2.7m room is $8,000–$15,000. A 5m × 5m × 2.7m freezer at -18°C is $12,000–$25,000. Industrial rooms start around $25,000 and run past $40,000. We issue a fixed-price quote within 24 hours of measure-up.",
+    a: "Every install is custom-quoted after an on-site measure-up — Keith prices your room based on the exact size, panel spec, refrigerant, condenser sizing, door package, electrical scope and any tenancy or council requirements. You get a fixed-price quote in writing within 24 business hours, and the number you sign is the number you pay.",
   },
   {
     q: "Do you provide the electrical work?",
