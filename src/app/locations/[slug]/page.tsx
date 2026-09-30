@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { MapPin, Clock, Phone } from "lucide-react";
 import { locations, getLocation } from "@/lib/locations";
 import { services } from "@/lib/services";
+import { CITY_SERVICE_SLUG_LIST } from "@/lib/cityServiceCombos";
 import { business, tel } from "@/lib/business";
 import { Hero } from "@/components/Hero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -89,11 +90,17 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
           <div>
             <h2 className="h3 mb-3">Services we deliver in {l.city}</h2>
             <div className="grid sm:grid-cols-2 gap-3">
-              {services.map((s) => (
-                <Link key={s.slug} href={`/services/${s.slug}`} className="card p-4 hover:bg-navy hover:text-white block group">
-                  <div className="font-display font-bold text-sm">{s.shortTitle}</div>
-                </Link>
-              ))}
+              {services.map((s) => {
+                const shortSlug = s.slug.replace(/-brisbane$/, "");
+                const hasLocalPage = CITY_SERVICE_SLUG_LIST.includes(shortSlug);
+                const href = hasLocalPage ? `/service-area/${l.slug}/${shortSlug}` : `/services/${s.slug}`;
+                return (
+                  <Link key={s.slug} href={href} className="card p-4 hover:bg-navy hover:text-white block group">
+                    <div className="font-display font-bold text-sm">{s.shortTitle}</div>
+                    {hasLocalPage && <div className="text-[11px] text-cherry group-hover:text-frost mt-0.5">Local {l.city} page</div>}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 

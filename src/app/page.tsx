@@ -4,6 +4,7 @@ import { ProcessSteps } from "@/components/ProcessSteps";
 import { ServicesGrid } from "@/components/ServicesGrid";
 import { IndustriesGrid } from "@/components/IndustriesGrid";
 import { LocationsGrid } from "@/components/LocationsGrid";
+import { CoverageMap } from "@/components/CoverageMap";
 import { ProjectsGallery } from "@/components/ProjectsGallery";
 import { Testimonials } from "@/components/Testimonials";
 import { SupplierStrip } from "@/components/SupplierStrip";
@@ -28,8 +29,8 @@ export default function HomePage() {
             <span className="badge-cherry">Transparent pricing</span>
             <h2 className="h2 mt-3">Cold room installation cost in Brisbane</h2>
             <p className="lede mt-3">
-              Most refrigeration companies hide pricing — we don't. Here's a real range for a Brisbane cold room install
-              in 2025, from a small cafe walk-in through to industrial-scale combi rooms.
+              Most refrigeration companies don't publish pricing — we do. Here's an indicative range for a Brisbane
+              cold room install in 2025, from a small cafe walk-in through to industrial-scale combi rooms.
             </p>
             <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-outline mt-6">
               Read the full cost guide
@@ -43,6 +44,7 @@ export default function HomePage() {
       <IndustriesGrid />
       <ProjectsGallery limit={6} />
       <Testimonials />
+      <CoverageMap />
       <LocationsGrid />
       <CTASection />
     </>

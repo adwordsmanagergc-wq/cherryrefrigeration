@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Phone } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { services, getService } from "@/lib/services";
 import { serviceContent } from "@/lib/serviceContent";
 import { serviceFaqs } from "@/lib/serviceFaqs";
 import { moneyPageFaqs } from "@/lib/faqs";
-import { business, tel } from "@/lib/business";
+import { business } from "@/lib/business";
 import { Hero } from "@/components/Hero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ProcessSteps } from "@/components/ProcessSteps";
@@ -15,10 +15,12 @@ import { ProjectsGallery } from "@/components/ProjectsGallery";
 import { Testimonials } from "@/components/Testimonials";
 import { IndustriesGrid } from "@/components/IndustriesGrid";
 import { LocationsGrid } from "@/components/LocationsGrid";
+import { CoverageMap } from "@/components/CoverageMap";
 import { FAQ } from "@/components/FAQ";
 import { QuoteForm } from "@/components/QuoteForm";
 import { CTASection } from "@/components/CTASection";
 import { QuoteCta } from "@/components/QuoteCta";
+import { StickyAnchorNav } from "@/components/StickyAnchorNav";
 import { JsonLd, faqSchema, serviceSchema } from "@/lib/schema";
 
 export async function generateStaticParams() {
@@ -35,6 +37,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: { title: s.metaTitle, description: s.metaDescription, url: `${business.url}/services/${s.slug}` },
   };
 }
+
+const moneyAnchors = [
+  { id: "overview", label: "Overview" },
+  { id: "process", label: "Process" },
+  { id: "types", label: "Cold room types" },
+  { id: "pricing", label: "Pricing" },
+  { id: "projects", label: "Projects" },
+  { id: "coverage", label: "Coverage" },
+  { id: "faq", label: "FAQ" },
+];
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const s = getService(params.slug);
@@ -53,9 +65,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       />
       <Hero h1={s.h1} sub={s.intro} />
 
+      {isMoneyPage && <StickyAnchorNav anchors={moneyAnchors} />}
+
       <Breadcrumbs items={[{ name: "Services", href: "/services/cold-room-installation-brisbane" }, { name: s.shortTitle, href: `/services/${s.slug}` }]} />
 
-      <section className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10">
+      <section id="overview" className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10 scroll-mt-32">
         <div className="lg:col-span-2 space-y-8">
           <ul className="grid sm:grid-cols-2 gap-3">
             {s.bullets.map((b) => (
@@ -71,15 +85,17 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </div>
           ))}
         </div>
-        <aside id="quote" className="lg:sticky lg:top-24 self-start scroll-mt-24">
+        <aside id="quote" className="lg:sticky lg:top-32 self-start scroll-mt-32">
           <QuoteForm />
         </aside>
       </section>
 
       {isMoneyPage && (
         <>
-          <ProcessSteps />
-          <section className="container-x py-14 lg:py-20">
+          <section id="process" className="scroll-mt-32">
+            <ProcessSteps />
+          </section>
+          <section id="types" className="container-x py-14 lg:py-20 scroll-mt-32">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="badge-cherry">Cold room types</span>
               <h2 className="h2 mt-3">Every type of cold room we install</h2>
@@ -100,37 +116,39 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               ))}
             </div>
           </section>
-          <section className="container-x py-14 lg:py-20 bg-ice -mx-5 sm:-mx-6 lg:-mx-8 px-5 sm:px-6 lg:px-8 rounded-xl">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              <div>
-                <span className="badge-cherry">Cost guide</span>
-                <h2 className="h2 mt-3">Cold room installation cost in Brisbane</h2>
-                <p className="lede mt-3">
-                  Most companies don't publish pricing. The table below shows indicative 2025 ranges for a fully
-                  installed, commissioned and certified Brisbane cold room. Your fixed-price quote is confirmed after
-                  on-site measure-up. Variations come from refrigerant choice, condenser sizing, door package, sub-main
-                  electrical and tenancy fitout requirements.
-                </p>
-                <p className="text-steel mt-3 leading-relaxed">
-                  Cherry Refrigeration is one of the only Brisbane refrigeration companies publishing fixed installation
-                  pricing, because we'd rather you have an honest number to budget against than a vague conversation. Once
-                  we measure on-site, the quote is fixed for the scope agreed.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-primary">Read full cost guide</Link>
-                  <QuoteCta className="btn-outline">Get a fixed quote</QuoteCta>
+          <section id="pricing" className="container-x py-14 lg:py-20 scroll-mt-32">
+            <div className="bg-ice rounded-2xl px-5 sm:px-6 lg:px-8 py-10 lg:py-14">
+              <div className="grid lg:grid-cols-2 gap-10 items-start">
+                <div>
+                  <span className="badge-cherry">Cost guide</span>
+                  <h2 className="h2 mt-3">Cold room installation cost in Brisbane</h2>
+                  <p className="lede mt-3">
+                    Most companies don't publish pricing. The table below shows indicative 2025 ranges for a fully
+                    installed, commissioned and certified Brisbane cold room. Your fixed-price quote is confirmed after
+                    on-site measure-up.
+                  </p>
+                  <p className="text-steel mt-3 leading-relaxed">
+                    Cherry Refrigeration is one of the only Brisbane refrigeration companies publishing indicative
+                    installation pricing — because you deserve an honest number to budget against.
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-primary">Read full cost guide</Link>
+                    <QuoteCta className="btn-outline">Get a fixed quote</QuoteCta>
+                  </div>
                 </div>
+                <PricingTable />
               </div>
-              <PricingTable />
             </div>
           </section>
-          <ProjectsGallery limit={6} />
+          <section id="projects" className="scroll-mt-32">
+            <ProjectsGallery limit={6} />
+          </section>
           <Testimonials />
           <IndustriesGrid />
         </>
       )}
 
-      <section className="container-x py-14 lg:py-20">
+      <section id="faq" className="container-x py-14 lg:py-20 scroll-mt-32">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="badge-cherry">FAQ</span>
           <h2 className="h2 mt-3">Frequently asked questions</h2>
@@ -142,6 +160,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
       {isMoneyPage && (
         <>
+          <section id="coverage" className="scroll-mt-32">
+            <CoverageMap />
+          </section>
           <LocationsGrid />
           <ComparisonTable />
         </>
@@ -172,7 +193,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 }
 
 function ComparisonTable() {
-  const rows = [
+  const rows: [string, boolean, boolean][] = [
     ["Refrigeration + electrical in one team", true, false],
     ["Fully licensed refrigeration + electrical scope", true, false],
     ["Fixed-price quote within 24 hours", true, false],
@@ -200,7 +221,7 @@ function ComparisonTable() {
           <tbody className="divide-y divide-navy/10 text-sm text-steel">
             {rows.map(([label, c, t], i) => (
               <tr key={i}>
-                <td className="px-4 py-3 font-semibold text-navy">{label as string}</td>
+                <td className="px-4 py-3 font-semibold text-navy">{label}</td>
                 <td className="px-4 py-3">{c ? <Check className="h-5 w-5 text-cherry" /> : "—"}</td>
                 <td className="px-4 py-3">{t ? <Check className="h-5 w-5" /> : "—"}</td>
               </tr>

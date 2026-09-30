@@ -1,4 +1,5 @@
 import { ClipboardList, PencilRuler, Hammer, Truck, BadgeCheck } from "lucide-react";
+import { Reveal, RevealStagger, RevealChild } from "./Reveal";
 
 const steps = [
   {
@@ -31,22 +32,26 @@ const steps = [
 export function ProcessSteps() {
   return (
     <section className="container-x py-14 lg:py-20">
-      <div className="text-center max-w-2xl mx-auto mb-10">
+      <Reveal className="text-center max-w-2xl mx-auto mb-10">
         <span className="badge-cherry">Our process</span>
         <h2 className="h2 mt-3">Site visit to commissioning, in 5 clear steps</h2>
         <p className="lede mt-2">Every Cherry Refrigeration cold room install follows the same proven process — with you in the loop the whole way.</p>
-      </div>
-      <ol className="grid gap-5 md:grid-cols-3 lg:grid-cols-5">
+      </Reveal>
+      <RevealStagger className="relative grid gap-5 md:grid-cols-3 lg:grid-cols-5">
+        {/* connector line — desktop */}
+        <div className="hidden lg:block absolute top-11 left-16 right-16 h-0.5 bg-gradient-to-r from-cherry/20 via-cherry/40 to-cherry/20 pointer-events-none" aria-hidden />
         {steps.map((s) => (
-          <li key={s.title} className="card p-6 relative">
-            <div className="h-11 w-11 rounded-lg bg-navy/5 grid place-items-center mb-4">
-              <s.icon className="h-5 w-5 text-cherry" />
+          <RevealChild key={s.title}>
+            <div className="card p-6 relative h-full">
+              <div className="h-11 w-11 rounded-lg bg-cherry/10 grid place-items-center mb-4 relative">
+                <s.icon className="h-5 w-5 text-cherry" />
+              </div>
+              <h3 className="font-display font-bold text-navy mb-2">{s.title}</h3>
+              <p className="text-sm text-steel leading-relaxed">{s.copy}</p>
             </div>
-            <h3 className="font-display font-bold text-navy mb-2">{s.title}</h3>
-            <p className="text-sm text-steel leading-relaxed">{s.copy}</p>
-          </li>
+          </RevealChild>
         ))}
-      </ol>
+      </RevealStagger>
     </section>
   );
 }

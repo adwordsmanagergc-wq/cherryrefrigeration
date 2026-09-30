@@ -5,6 +5,7 @@ import { locations } from "@/lib/locations";
 import { resources } from "@/lib/resources";
 import { blogPosts } from "@/lib/blog";
 import { projects } from "@/lib/projects";
+import { getCityServiceCombos } from "@/lib/cityServiceCombos";
 import { business } from "@/lib/business";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -28,5 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...resources.map((r) => url(`/resources/${r.slug}`)),
     ...blogPosts.map((p) => url(`/blog/${p.slug}`)),
     ...projects.map((p) => url(`/projects/${p.slug}`)),
+    ...getCityServiceCombos().map((c) => ({ ...url(c.url), priority: 0.85 })),
   ];
 }

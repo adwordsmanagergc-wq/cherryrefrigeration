@@ -1,4 +1,5 @@
 import { Wrench, Zap, Clock, ShieldCheck, Award, PhoneCall } from "lucide-react";
+import { Reveal, RevealStagger, RevealChild } from "./Reveal";
 
 const items = [
   { icon: Wrench, title: "Custom-built to your space", copy: "Every cold room is engineered to fit your tenancy — corner pieces, awkward walls, low ceilings, no problem." },
@@ -12,21 +13,23 @@ const items = [
 export function Benefits({ heading = "Why Brisbane operators choose Cherry Refrigeration" }: { heading?: string }) {
   return (
     <section className="container-x py-14 lg:py-20">
-      <div className="text-center max-w-2xl mx-auto mb-10">
+      <Reveal className="text-center max-w-2xl mx-auto mb-10">
         <span className="badge-cherry">Why Cherry</span>
         <h2 className="h2 mt-3">{heading}</h2>
-      </div>
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      </Reveal>
+      <RevealStagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
-          <div key={item.title} className="card p-6">
-            <div className="h-11 w-11 rounded-lg bg-cherry/10 grid place-items-center mb-4">
-              <item.icon className="h-5 w-5 text-cherry" />
+          <RevealChild key={item.title}>
+            <div className="card p-6 h-full">
+              <div className="h-11 w-11 rounded-lg bg-cherry/10 grid place-items-center mb-4">
+                <item.icon className="h-5 w-5 text-cherry" />
+              </div>
+              <h3 className="font-display font-bold text-navy mb-2">{item.title}</h3>
+              <p className="text-sm text-steel leading-relaxed">{item.copy}</p>
             </div>
-            <h3 className="font-display font-bold text-navy mb-2">{item.title}</h3>
-            <p className="text-sm text-steel leading-relaxed">{item.copy}</p>
-          </div>
+          </RevealChild>
         ))}
-      </div>
+      </RevealStagger>
     </section>
   );
 }

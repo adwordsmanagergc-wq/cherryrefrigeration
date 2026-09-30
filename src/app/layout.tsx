@@ -5,7 +5,7 @@ import Script from "next/script";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
-import { JsonLd, localBusinessSchema, organizationSchema } from "@/lib/schema";
+import { JsonLd, localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
 import { business } from "@/lib/business";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -53,9 +53,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-AU" className={`${inter.variable} ${manrope.variable}`}>
       <head>
         <link rel="alternate" hrefLang="en-AU" href={business.url} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
-        <JsonLd data={[localBusinessSchema(), organizationSchema()]} />
+        <JsonLd data={[localBusinessSchema(), organizationSchema(), websiteSchema()]} />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:bg-cherry focus:text-white focus:px-3 focus:py-2 focus:rounded-md focus:z-50">
           Skip to content
         </a>

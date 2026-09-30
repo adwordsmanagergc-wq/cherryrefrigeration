@@ -82,6 +82,18 @@ export function organizationSchema() {
   };
 }
 
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${business.url}#website`,
+    url: business.url,
+    name: business.name,
+    inLanguage: "en-AU",
+    publisher: { "@id": `${business.url}#business` },
+  };
+}
+
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",
