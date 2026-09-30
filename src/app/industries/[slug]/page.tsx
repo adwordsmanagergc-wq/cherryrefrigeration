@@ -32,7 +32,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <JsonLd data={serviceSchema({ name: `Cold rooms for ${i.name}`, description: i.metaDescription, slug: `industries/${i.slug}` })} />
+      <JsonLd data={serviceSchema({ name: `Cool rooms for ${i.name}`, description: i.metaDescription, slug: `industries/${i.slug}` })} />
       <Hero h1={i.h1} sub={i.intro} eyebrow={`Industry: ${i.name}`} />
       <Breadcrumbs items={[{ name: "Industries", href: "/industries/restaurants-cafes" }, { name: i.name, href: `/industries/${i.slug}` }]} />
 
@@ -91,7 +91,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
       </section>
 
       <Testimonials />
-      <CTASection heading={`Need a cold room for your ${i.name.toLowerCase().replace(/s$/, "")} business?`} />
+      <CTASection heading={`Need a cool room for your ${i.name.toLowerCase().replace(/s$/, "")} business?`} />
     </>
   );
 }

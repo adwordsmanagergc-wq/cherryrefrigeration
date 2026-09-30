@@ -118,7 +118,7 @@ export function QuoteForm({ multiStep = false }: { multiStep?: boolean }) {
               <option value="Other / not sure">Other / not sure</option>
             </select>
           </Field>
-          <Field label="Cold room size (optional)">
+          <Field label="Cool room size (optional)">
             <select className="input" {...register("size")} defaultValue="">
               <option value="">Not sure / N/A</option>
               <option>Small (up to 3m × 3m)</option>

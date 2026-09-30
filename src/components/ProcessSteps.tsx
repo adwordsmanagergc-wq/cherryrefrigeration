@@ -35,7 +35,7 @@ export function ProcessSteps() {
       <Reveal className="text-center max-w-2xl mx-auto mb-10">
         <span className="badge-cherry">Our process</span>
         <h2 className="h2 mt-3">Site visit to commissioning, in 5 clear steps</h2>
-        <p className="lede mt-2">Every Cherry Refrigeration cold room install follows the same proven process — with you in the loop the whole way.</p>
+        <p className="lede mt-2">Every Cherry Refrigeration cool room install follows the same proven process — with you in the loop the whole way.</p>
       </Reveal>
       <RevealStagger className="relative grid gap-5 md:grid-cols-3 lg:grid-cols-5">
         {/* connector line — desktop */}

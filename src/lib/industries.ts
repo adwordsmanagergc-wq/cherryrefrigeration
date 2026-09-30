@@ -14,12 +14,12 @@ export const industries: Industry[] = [
   {
     slug: "restaurants-cafes",
     name: "Restaurants & Cafes",
-    h1: "Cold Rooms & Refrigeration for Brisbane Restaurants and Cafes",
-    metaTitle: "Restaurant Cold Rooms Brisbane | Cherry Refrigeration",
+    h1: "Cool Rooms & Refrigeration for Brisbane Restaurants and Cafes",
+    metaTitle: "Restaurant Cool Rooms Brisbane | Cherry Refrigeration",
     metaDescription:
-      "Cold rooms, walk-in chillers and commercial fridges built for Brisbane restaurants and cafes. Tenancy-friendly, HACCP compliant. Call 0432 115 513.",
+      "Cool rooms, walk-in chillers and commercial fridges built for Brisbane restaurants and cafes. Tenancy-friendly, HACCP compliant. Call 0432 115 513.",
     intro:
-      "Brisbane restaurants and cafes work to tight tenancies, tighter timelines and zero tolerance for stock loss. Cherry Refrigeration designs cold rooms that fit awkward kitchens, hold prep temps through 35°C summer days, and stay quiet enough not to upset the dining room.",
+      "Brisbane restaurants and cafes work to tight tenancies, tighter timelines and zero tolerance for stock loss. Cherry Refrigeration designs cool rooms that fit awkward kitchens, hold prep temps through 35°C summer days, and stay quiet enough not to upset the dining room.",
     pains: [
       "Tight kitchen footprints with no straight walls",
       "Power supply already at capacity",
@@ -28,7 +28,7 @@ export const industries: Industry[] = [
       "HACCP records the auditor actually accepts",
     ],
     solutions: [
-      "Custom L-shape and corner cold rooms to use every inch",
+      "Custom L-shape and corner cool rooms to use every inch",
       "Energy-efficient inverter condensers that work on existing power",
       "Tenancy-compliant penetrations, drains and condensate runs",
       "After-hours installs and overnight commissioning",
@@ -38,12 +38,12 @@ export const industries: Industry[] = [
   {
     slug: "butchers",
     name: "Butchers",
-    h1: "Cold Rooms for Brisbane Butchers — HACCP-Ready, Built for Carcass Hanging",
-    metaTitle: "Butcher Cold Rooms Brisbane | Cherry Refrigeration",
+    h1: "Cool Rooms for Brisbane Butchers — HACCP-Ready, Built for Carcass Hanging",
+    metaTitle: "Butcher Cool Rooms Brisbane | Cherry Refrigeration",
     metaDescription:
-      "Carcass cold rooms, ageing chambers and freezer rooms for Brisbane butchers. Rail systems, drainage, HACCP compliant. Call 0432 115 513.",
+      "Carcass cool rooms, ageing chambers and freezer rooms for Brisbane butchers. Rail systems, drainage, HACCP compliant. Call 0432 115 513.",
     intro:
-      "Butcher cold rooms aren't shop fridges. Cherry Refrigeration designs and installs carcass-rated chillers, dry-ageing chambers and -25°C freezer rooms across Brisbane and South East Queensland — with the rail systems, fall-to-drain floors and humidity control your operation actually needs.",
+      "Butcher cool rooms aren't shop fridges. Cherry Refrigeration designs and installs carcass-rated chillers, dry-ageing chambers and -25°C freezer rooms across Brisbane and South East Queensland — with the rail systems, fall-to-drain floors and humidity control your operation actually needs.",
     pains: [
       "Carcass weight on rails and supporting beams",
       "Humidity drift causing surface drying or slime",
@@ -62,14 +62,14 @@ export const industries: Industry[] = [
   {
     slug: "florists",
     name: "Florists",
-    h1: "Florist Cold Rooms Brisbane — Humidity-Controlled Display Chillers",
-    metaTitle: "Florist Cold Rooms Brisbane | Cherry Refrigeration",
+    h1: "Florist Cool Rooms Brisbane — Humidity-Controlled Display Chillers",
+    metaTitle: "Florist Cool Rooms Brisbane | Cherry Refrigeration",
     metaDescription:
-      "Glass-front florist cold rooms with humidity control. Custom built for Brisbane florists. Free quote. Call 0432 115 513.",
+      "Glass-front florist cool rooms with humidity control. Custom built for Brisbane florists. Free quote. Call 0432 115 513.",
     intro:
-      "Cut flowers don't want a fridge — they want 4°C and 90% humidity, with airflow that doesn't blast petals dry. Cherry Refrigeration builds glass-front florist cold rooms tuned exactly for this, with even airflow and humidifier integration as standard.",
+      "Cut flowers don't want a fridge — they want 4°C and 90% humidity, with airflow that doesn't blast petals dry. Cherry Refrigeration builds glass-front florist cool rooms tuned exactly for this, with even airflow and humidifier integration as standard.",
     pains: [
-      "Standard cold rooms drying out flower stems",
+      "Standard cool rooms drying out flower stems",
       "Uneven airflow wilting back-row stock",
       "Glass doors fogging over before the morning rush",
       "Footprint constraints inside small retail tenancies",
@@ -86,12 +86,12 @@ export const industries: Industry[] = [
   {
     slug: "pharmacy-medical",
     name: "Pharmacy & Medical",
-    h1: "Pharmacy & Medical Cold Rooms Brisbane — TGA & Vaccine-Grade Storage",
-    metaTitle: "Pharmacy Cold Rooms Brisbane | Vaccine Storage | Cherry Refrigeration",
+    h1: "Pharmacy & Medical Cool Rooms Brisbane — TGA & Vaccine-Grade Storage",
+    metaTitle: "Pharmacy Cool Rooms Brisbane | Vaccine Storage | Cherry Refrigeration",
     metaDescription:
-      "TGA-compliant pharmacy and vaccine cold rooms. 2–8°C, alarms, data logging. Brisbane installation. Call 0432 115 513.",
+      "TGA-compliant pharmacy and vaccine cool rooms. 2–8°C, alarms, data logging. Brisbane installation. Call 0432 115 513.",
     intro:
-      "Pharmacy and medical cold storage has to hold 2–8°C, alarm on excursion and document every minute. Cherry Refrigeration installs vaccine-grade cold rooms across Brisbane with redundant refrigeration, calibrated probes and data logging that satisfies TGA and Strive for 5 audits.",
+      "Pharmacy and medical cold storage has to hold 2–8°C, alarm on excursion and document every minute. Cherry Refrigeration installs vaccine-grade cool rooms across Brisbane with redundant refrigeration, calibrated probes and data logging that satisfies TGA and Strive for 5 audits.",
     pains: [
       "Single point of failure on existing fridges",
       "TGA audit trail and probe calibration",
@@ -110,12 +110,12 @@ export const industries: Industry[] = [
   {
     slug: "supermarkets-grocers",
     name: "Supermarkets & Grocers",
-    h1: "Supermarket & Grocer Cold Rooms Brisbane — Coolrooms, Display Cases & Glycol Plant",
-    metaTitle: "Supermarket Cold Rooms Brisbane | Cherry Refrigeration",
+    h1: "Supermarket & Grocer Cool Rooms Brisbane — Coolrooms, Display Cases & Glycol Plant",
+    metaTitle: "Supermarket Cool Rooms Brisbane | Cherry Refrigeration",
     metaDescription:
       "Coolrooms, freezer rooms, display cases and glycol plant for Brisbane supermarkets and grocers. 24/7 service. Call 0432 115 513.",
     intro:
-      "Supermarkets live or die on uptime. Cherry Refrigeration installs and services back-of-house cold rooms, freezer rooms, glycol plant and front-of-house display cases for independent grocers and small-format chains across Brisbane.",
+      "Supermarkets live or die on uptime. Cherry Refrigeration installs and services back-of-house cool rooms, freezer rooms, glycol plant and front-of-house display cases for independent grocers and small-format chains across Brisbane.",
     pains: [
       "Multiple temperature zones in one back room",
       "Display case run-outs during peak trade",
@@ -134,10 +134,10 @@ export const industries: Industry[] = [
   {
     slug: "breweries-distilleries",
     name: "Breweries & Distilleries",
-    h1: "Brewery & Distillery Cold Rooms Brisbane — Fermentation, Cold Crash & Keg Storage",
-    metaTitle: "Brewery Cold Rooms Brisbane | Cherry Refrigeration",
+    h1: "Brewery & Distillery Cool Rooms Brisbane — Fermentation, Cold Crash & Keg Storage",
+    metaTitle: "Brewery Cool Rooms Brisbane | Cherry Refrigeration",
     metaDescription:
-      "Glycol chillers, fermentation cold rooms and keg storage for Brisbane breweries and distilleries. Custom engineered. Call 0432 115 513.",
+      "Glycol chillers, fermentation cool rooms and keg storage for Brisbane breweries and distilleries. Custom engineered. Call 0432 115 513.",
     intro:
       "Beer is just chemistry on a clock. Cherry Refrigeration builds glycol-cooled fermentation chambers, cold-crash rooms and large-format keg cold stores for Brisbane breweries and distilleries — engineered for the heat loads your tanks actually pull.",
     pains: [
@@ -158,10 +158,10 @@ export const industries: Industry[] = [
   {
     slug: "seafood-distributors",
     name: "Seafood Distributors",
-    h1: "Seafood Cold Rooms & Freezer Rooms Brisbane — Built for the Cold Chain",
-    metaTitle: "Seafood Cold Rooms Brisbane | Cherry Refrigeration",
+    h1: "Seafood Cool Rooms & Freezer Rooms Brisbane — Built for the Cold Chain",
+    metaTitle: "Seafood Cool Rooms Brisbane | Cherry Refrigeration",
     metaDescription:
-      "Seafood cold rooms, blast freezers and -25°C freezer rooms in Brisbane. Stainless, drained, HACCP ready. Call 0432 115 513.",
+      "Seafood cool rooms, blast freezers and -25°C freezer rooms in Brisbane. Stainless, drained, HACCP ready. Call 0432 115 513.",
     intro:
       "Seafood needs cold chain that doesn't blink. Cherry Refrigeration builds 0–2°C ice rooms, -25°C freezer rooms and blast freezers for Brisbane wholesalers and distributors, with stainless skins and graded floors built to wash down twice a day.",
     pains: [
@@ -182,12 +182,12 @@ export const industries: Industry[] = [
   {
     slug: "cold-storage-logistics",
     name: "Cold Storage & Logistics",
-    h1: "Cold Storage & Logistics Cold Rooms Brisbane — Distribution-Scale Refrigeration",
-    metaTitle: "Cold Storage Brisbane | 3PL Cold Rooms | Cherry Refrigeration",
+    h1: "Cold Storage & Logistics Cool Rooms Brisbane — Distribution-Scale Refrigeration",
+    metaTitle: "Cold Storage Brisbane | 3PL Cool Rooms | Cherry Refrigeration",
     metaDescription:
-      "Distribution-scale cold rooms and freezer rooms for Brisbane 3PLs and cold storage operators. Racking-ready, energy-efficient. Call 0432 115 513.",
+      "Distribution-scale cool rooms and freezer rooms for Brisbane 3PLs and cold storage operators. Racking-ready, energy-efficient. Call 0432 115 513.",
     intro:
-      "Cherry Refrigeration designs and installs distribution-scale cold rooms and freezer rooms for Brisbane 3PLs, importers and cold-chain operators — from 100 m² to 1,500 m², racking-ready, with energy-efficient plant sized for 24/7 operation.",
+      "Cherry Refrigeration designs and installs distribution-scale cool rooms and freezer rooms for Brisbane 3PLs, importers and cold-chain operators — from 100 m² to 1,500 m², racking-ready, with energy-efficient plant sized for 24/7 operation.",
     pains: [
       "Forklift traffic damaging panels and doors",
       "Energy bills dominating P&L",

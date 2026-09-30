@@ -7,15 +7,15 @@ import { blogPosts } from "@/lib/blog";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Cold Room & Refrigeration Blog | Cherry Refrigeration Brisbane",
-  description: "Tips, pricing guides and field notes on cold rooms, freezer rooms, refrigeration and HVAC across Brisbane and SE QLD.",
+  title: "Cool Room & Refrigeration Blog | Cherry Refrigeration Brisbane",
+  description: "Tips, pricing guides and field notes on cool rooms, freezer rooms, refrigeration and HVAC across Brisbane and SE QLD.",
   alternates: { canonical: `${business.url}/blog` },
 };
 
 export default function BlogIndex() {
   return (
     <>
-      <Hero eyebrow="Blog" h1="Cold room & refrigeration field notes" sub="Pricing guides, troubleshooting, compliance and energy notes from Cherry Refrigeration's field crews." />
+      <Hero eyebrow="Blog" h1="Cool room & refrigeration field notes" sub="Pricing guides, troubleshooting, compliance and energy notes from Cherry Refrigeration's field crews." />
       <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
       <section className="container-x py-14 lg:py-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {blogPosts.map((p) => (

@@ -1,10 +1,15 @@
 import type { MetadataRoute } from "next";
-import { business } from "@/lib/business";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/quote-received"] }],
-    sitemap: `${business.url}/sitemap.xml`,
-    host: business.url,
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/", "/quote-received", "/projects"],
+      },
+    ],
+    sitemap: `${siteConfig.siteUrl}/sitemap.xml`,
   };
 }

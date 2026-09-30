@@ -7,7 +7,7 @@ export function IndustriesGrid({ heading = "Industries we serve" }: { heading?: 
       <div className="text-center max-w-2xl mx-auto mb-10">
         <span className="badge-cherry">Industries</span>
         <h2 className="h2 mt-3">{heading}</h2>
-        <p className="lede mt-2">Cold room engineering tuned for your industry's specific cold-chain needs.</p>
+        <p className="lede mt-2">Cool room engineering tuned for your industry's specific cold-chain needs.</p>
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {industries.map((i) => (

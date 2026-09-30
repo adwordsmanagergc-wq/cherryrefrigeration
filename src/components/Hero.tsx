@@ -68,7 +68,7 @@ export function Hero({
               <div className="aspect-[4/5]">
                 <Image
                   src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=900&q=75"
-                  alt="Interior of a commercial cold room with stainless steel shelving"
+                  alt="Interior of a commercial cool room with stainless steel shelving"
                   fill
                   priority
                   sizes="(min-width: 1024px) 40vw, 100vw"
@@ -81,7 +81,7 @@ export function Hero({
                   <ShieldCheck className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-display font-bold text-white text-sm">Custom-built cold rooms</div>
+                  <div className="font-display font-bold text-white text-sm">Custom-built cool rooms</div>
                   <div className="text-xs text-white/80">Designed &amp; installed in South East QLD</div>
                 </div>
               </div>

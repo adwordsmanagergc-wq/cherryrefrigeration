@@ -7,7 +7,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { LocationsGrid } from "@/components/LocationsGrid";
 
 export const metadata: Metadata = {
-  title: "Contact Cherry Refrigeration | Brisbane Cold Room Specialists",
+  title: "Contact Cherry Refrigeration | Brisbane Cool Room Specialists",
   description: "Call Keith on 0432 115 513 or email service@cherryrefrigeration.com.au. Free fixed-price quote within 24 hours, 24/7 emergency line, Brisbane and SE QLD.",
   alternates: { canonical: `${business.url}/contact` },
 };
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Hero eyebrow="Contact" h1="Talk to Keith — Brisbane's cold room specialist" sub="Free fixed-price quote within 24 hours. Same-day breakdown response across Greater Brisbane. 24/7 emergency line for total breakdowns." showImage={false} />
+      <Hero eyebrow="Contact" h1="Talk to Keith — Brisbane's cool room specialist" sub="Free fixed-price quote within 24 hours. Same-day breakdown response across Greater Brisbane. 24/7 emergency line for total breakdowns." showImage={false} />
       <Breadcrumbs items={[{ name: "Contact", href: "/contact" }]} />
       <section className="container-x py-14 lg:py-20 grid lg:grid-cols-2 gap-10">
         <div className="space-y-5">
@@ -38,7 +38,7 @@ export default function ContactPage() {
             />
           </div>
           <div className="card p-6 bg-cherry text-white">
-            <h3 className="font-display font-bold text-xl mb-2">Cold room down right now?</h3>
+            <h3 className="font-display font-bold text-xl mb-2">Cool room down right now?</h3>
             <p className="text-white/90 text-sm mb-4">Call our 24/7 emergency line. Same-day Brisbane response, even on weekends.</p>
             <a href={tel} className="inline-flex items-center gap-2 bg-white text-cherry font-bold px-4 py-2 rounded-md hover:bg-ice">
               <Phone className="h-4 w-4" /> Call {business.phone}

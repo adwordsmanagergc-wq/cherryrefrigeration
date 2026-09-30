@@ -12,14 +12,16 @@ export function Footer() {
         <div className="lg:col-span-2">
           <div className="font-display font-extrabold text-2xl mb-3">Cherry Refrigeration</div>
           <p className="text-white/80 max-w-md mb-5 leading-relaxed">
-            Custom cold room installation, refrigeration and air conditioning across Brisbane and South East
+            Custom cool room installation, refrigeration and air conditioning across Brisbane and South East
             Queensland.
           </p>
           <ul className="space-y-2 text-sm">
             <li className="flex gap-2"><Phone className="h-4 w-4 text-frost" /><a href={tel} className="hover:underline">{business.phone}</a></li>
             <li className="flex gap-2"><Mail className="h-4 w-4 text-frost" /><a href={mailto} className="hover:underline">{business.email}</a></li>
-            <li className="flex gap-2"><MapPin className="h-4 w-4 text-frost" />Servicing Brisbane & SE QLD</li>
-            <li className="flex gap-2"><Clock className="h-4 w-4 text-frost" />Mon–Fri 7am–5pm • Sat 8am–1pm • 24/7 emergency</li>
+            <li className="flex gap-2"><MapPin className="h-4 w-4 text-frost" />Servicing Brisbane and SE QLD</li>
+            <li className="flex gap-2"><Clock className="h-4 w-4 text-frost" />Mon to Fri 7am to 5pm • Sat 8am to 1pm • 24/7 emergency</li>
+            {business.acn && <li className="flex gap-2"><span className="w-4 shrink-0 text-frost">·</span>ACN {business.acn}</li>}
+            {business.abn && <li className="flex gap-2"><span className="w-4 shrink-0 text-frost">·</span>ABN {business.abn}</li>}
           </ul>
           {(business.qbcc || business.arc || business.masterElectricians || business.publicLiability) && (
             <div className="mt-5 flex flex-wrap gap-2 text-xs">
@@ -61,7 +63,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-x py-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/60">
-          <div>© {new Date().getFullYear()} {business.legalName} — ACN {business.acn}. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} {business.legalName}{business.acn ? `, ACN ${business.acn}` : ""}. All rights reserved.</div>
           <div className="flex flex-wrap gap-4">
             <Link href="/privacy" className="hover:text-white">Privacy</Link>
             <Link href="/terms" className="hover:text-white">Terms</Link>

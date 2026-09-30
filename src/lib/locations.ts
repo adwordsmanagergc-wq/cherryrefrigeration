@@ -17,10 +17,10 @@ export const locations: Location[] = [
     slug: "brisbane-cbd",
     city: "Brisbane CBD",
     region: "Inner Brisbane",
-    h1: "Cold Room Installation in Brisbane CBD",
-    metaTitle: "Cold Room Installation Brisbane CBD | Cherry Refrigeration",
+    h1: "Cool Room Installation in Brisbane CBD",
+    metaTitle: "Cool Room Installation Brisbane CBD | Cherry Refrigeration",
     metaDescription:
-      "Custom cold room installation in Brisbane CBD. Tenancy-friendly, after-hours installs, free quote in 24 hours. Call 0432 115 513.",
+      "Custom cool room installation in Brisbane CBD. Tenancy-friendly, after-hours installs, free quote in 24 hours. Call 0432 115 513.",
     intro:
       "Brisbane CBD installs come with a unique mix of constraints — tower loading docks, after-hours-only access, strict body-corporate rules and tenancies that already share power. Cherry Refrigeration handles all of it routinely, with night-shift install crews and tenancy-compliant fitout drawings.",
     nearbySuburbs: ["Spring Hill", "Fortitude Valley", "South Brisbane", "Kangaroo Point", "Milton"],
@@ -31,10 +31,10 @@ export const locations: Location[] = [
     slug: "gold-coast",
     city: "Gold Coast",
     region: "Gold Coast",
-    h1: "Cold Room Installation on the Gold Coast",
-    metaTitle: "Cold Room Installation Gold Coast | Cherry Refrigeration",
+    h1: "Cool Room Installation on the Gold Coast",
+    metaTitle: "Cool Room Installation Gold Coast | Cherry Refrigeration",
     metaDescription:
-      "Custom cold rooms, freezer rooms and commercial refrigeration on the Gold Coast. Brisbane-based, fixed-price quotes. Call 0432 115 513.",
+      "Custom cool rooms, freezer rooms and commercial refrigeration on the Gold Coast. Brisbane-based, fixed-price quotes. Call 0432 115 513.",
     intro:
       "Cherry Refrigeration covers the Gold Coast week in, week out — from Coomera and Helensvale down to Burleigh, Palm Beach and Coolangatta. Coastal climate matters: we spec corrosion-resistant condensers and stainless cabinets on every coastal install.",
     nearbySuburbs: ["Surfers Paradise", "Broadbeach", "Burleigh Heads", "Robina", "Coomera"],
@@ -45,12 +45,12 @@ export const locations: Location[] = [
     slug: "ipswich",
     city: "Ipswich",
     region: "Western Brisbane",
-    h1: "Cold Room Installation in Ipswich",
-    metaTitle: "Cold Room Installation Ipswich | Cherry Refrigeration",
+    h1: "Cool Room Installation in Ipswich",
+    metaTitle: "Cool Room Installation Ipswich | Cherry Refrigeration",
     metaDescription:
-      "Custom cold rooms and refrigeration in Ipswich. Brisbane-based, fixed quotes, fixed-price quotes. Call 0432 115 513.",
+      "Custom cool rooms and refrigeration in Ipswich. Brisbane-based, fixed quotes, fixed-price quotes. Call 0432 115 513.",
     intro:
-      "From Booval to Springfield Lakes and out to Rosewood, Cherry Refrigeration installs and services cold rooms across Ipswich. Local trade, statewide capability — and we don't tack on a regional surcharge.",
+      "From Booval to Springfield Lakes and out to Rosewood, Cherry Refrigeration installs and services cool rooms across Ipswich. Local trade, statewide capability — and we don't tack on a regional surcharge.",
     nearbySuburbs: ["Springfield Lakes", "Booval", "Goodna", "Bundamba", "Yamanto"],
     responseTime: "Same-day for breakdowns, 24-hour quote turnaround",
     geo: { lat: -27.6171, lng: 152.7608 },
@@ -59,12 +59,12 @@ export const locations: Location[] = [
     slug: "logan",
     city: "Logan",
     region: "South Brisbane",
-    h1: "Cold Room Installation in Logan",
-    metaTitle: "Cold Room Installation Logan | Cherry Refrigeration",
+    h1: "Cool Room Installation in Logan",
+    metaTitle: "Cool Room Installation Logan | Cherry Refrigeration",
     metaDescription:
-      "Custom cold rooms, freezer rooms and air conditioning in Logan. Fixed quotes within 24 hours. Call 0432 115 513.",
+      "Custom cool rooms, freezer rooms and air conditioning in Logan. Fixed quotes within 24 hours. Call 0432 115 513.",
     intro:
-      "Cherry Refrigeration installs cold rooms across Logan — Springwood, Beenleigh, Underwood, Browns Plains and out to Jimboomba. Industrial estates, retail tenancies and restaurant fitouts, all covered.",
+      "Cherry Refrigeration installs cool rooms across Logan — Springwood, Beenleigh, Underwood, Browns Plains and out to Jimboomba. Industrial estates, retail tenancies and restaurant fitouts, all covered.",
     nearbySuburbs: ["Springwood", "Beenleigh", "Underwood", "Browns Plains", "Jimboomba"],
     responseTime: "Same-day Logan response Mon–Sat",
     geo: { lat: -27.6395, lng: 153.1085 },
@@ -73,10 +73,10 @@ export const locations: Location[] = [
     slug: "redlands",
     city: "Redlands",
     region: "Bayside",
-    h1: "Cold Room Installation in Redland City",
-    metaTitle: "Cold Room Installation Redlands | Cherry Refrigeration",
+    h1: "Cool Room Installation in Redland City",
+    metaTitle: "Cool Room Installation Redlands | Cherry Refrigeration",
     metaDescription:
-      "Custom cold rooms and refrigeration across the Redlands. Cleveland, Capalaba, Victoria Point. Free quote. Call 0432 115 513.",
+      "Custom cool rooms and refrigeration across the Redlands. Cleveland, Capalaba, Victoria Point. Free quote. Call 0432 115 513.",
     intro:
       "Cherry Refrigeration covers Redland City weekly — Cleveland, Capalaba, Victoria Point, Wellington Point and the bay islands. Coastal-spec components on every install, and we'll quote North Stradbroke Island jobs without batting an eye.",
     nearbySuburbs: ["Cleveland", "Capalaba", "Victoria Point", "Wellington Point", "Birkdale"],
@@ -87,10 +87,10 @@ export const locations: Location[] = [
     slug: "moreton-bay",
     city: "Moreton Bay",
     region: "North Brisbane",
-    h1: "Cold Room Installation in Moreton Bay Region",
-    metaTitle: "Cold Room Installation Moreton Bay | Cherry Refrigeration",
+    h1: "Cool Room Installation in Moreton Bay Region",
+    metaTitle: "Cool Room Installation Moreton Bay | Cherry Refrigeration",
     metaDescription:
-      "Custom cold rooms and refrigeration in Moreton Bay. North Lakes, Caboolture, Redcliffe. Call 0432 115 513.",
+      "Custom cool rooms and refrigeration in Moreton Bay. North Lakes, Caboolture, Redcliffe. Call 0432 115 513.",
     intro:
       "Cherry Refrigeration runs a North Brisbane / Moreton Bay route covering North Lakes, Caboolture, Redcliffe, Strathpine and Bribie Island. From cafe walk-ins to industrial freezer rooms, we install and service the whole region.",
     nearbySuburbs: ["North Lakes", "Caboolture", "Redcliffe", "Strathpine", "Bribie Island"],
@@ -101,10 +101,10 @@ export const locations: Location[] = [
     slug: "sunshine-coast",
     city: "Sunshine Coast",
     region: "Sunshine Coast",
-    h1: "Cold Room Installation on the Sunshine Coast",
-    metaTitle: "Cold Room Installation Sunshine Coast | Cherry Refrigeration",
+    h1: "Cool Room Installation on the Sunshine Coast",
+    metaTitle: "Cool Room Installation Sunshine Coast | Cherry Refrigeration",
     metaDescription:
-      "Custom cold rooms and refrigeration on the Sunshine Coast. Maroochydore, Noosa, Caloundra. Call 0432 115 513.",
+      "Custom cool rooms and refrigeration on the Sunshine Coast. Maroochydore, Noosa, Caloundra. Call 0432 115 513.",
     intro:
       "Cherry Refrigeration runs Sunshine Coast routes weekly — Maroochydore, Noosa, Caloundra, Mooloolaba and the hinterland. Coastal-grade install spec, statewide reach, no regional surcharges.",
     nearbySuburbs: ["Maroochydore", "Noosa", "Caloundra", "Mooloolaba", "Buderim"],
@@ -115,10 +115,10 @@ export const locations: Location[] = [
     slug: "toowoomba",
     city: "Toowoomba",
     region: "Darling Downs",
-    h1: "Cold Room Installation in Toowoomba",
-    metaTitle: "Cold Room Installation Toowoomba | Cherry Refrigeration",
+    h1: "Cool Room Installation in Toowoomba",
+    metaTitle: "Cool Room Installation Toowoomba | Cherry Refrigeration",
     metaDescription:
-      "Custom cold rooms in Toowoomba and the Darling Downs. Plant sized for the climate range. Call 0432 115 513.",
+      "Custom cool rooms in Toowoomba and the Darling Downs. Plant sized for the climate range. Call 0432 115 513.",
     intro:
       "Toowoomba's range climate — frost mornings to 35°C summer afternoons — demands properly sized refrigeration. Cherry Refrigeration travels weekly to Toowoomba and the Downs with the right plant for the climate, every time.",
     nearbySuburbs: ["Highfields", "Drayton", "Wilsonton", "Kearneys Spring", "Glenvale"],

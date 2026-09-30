@@ -8,9 +8,12 @@ import { projects } from "@/lib/projects";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Cold Room Projects Brisbane | Cherry Refrigeration",
-  description: "Recent cold room and refrigeration installs across Brisbane and SE QLD.",
+  title: "Cool Room Projects Brisbane | Cherry Refrigeration",
+  description: "Recent cool room and refrigeration installs across Brisbane and SE QLD.",
   alternates: { canonical: `${business.url}/projects` },
+  // Portfolio is being populated. Keep the route live but hidden from Google
+  // and remove from nav / sitemap until at least three real projects exist.
+  robots: { index: false, follow: true },
 };
 
 export default function ProjectsPage() {
@@ -18,7 +21,7 @@ export default function ProjectsPage() {
     <>
       <Hero
         eyebrow="Portfolio"
-        h1="Cold rooms we've installed across Brisbane"
+        h1="Cool rooms we've installed across Brisbane"
         sub="Case studies from real Brisbane installs."
         showImage={false}
       />

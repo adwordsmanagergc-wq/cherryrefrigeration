@@ -6,34 +6,41 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
 import { JsonLd, localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
-import { business } from "@/lib/business";
+import { siteConfig } from "@/lib/siteConfig";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
 
+const DEFAULT_TITLE = "Cool Rooms, Refrigeration & Air Con Brisbane | Cherry Refrigeration";
+const DEFAULT_DESCRIPTION =
+  "Brisbane specialists in cool room installation, cool room repairs, freezer rooms, commercial refrigeration and AC. Free fixed price quote in 24 hours. Call 0432 115 513.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(business.url),
+  metadataBase: new URL(siteConfig.siteUrl),
+  // Titles set on individual pages replace the whole title. Only leaf pages
+  // that do not set a title fall back to DEFAULT_TITLE. The template pattern
+  // "%s | Cherry Refrigeration" is intentionally NOT used because page titles
+  // already include the brand suffix, which caused a duplicated
+  // "| Cherry Refrigeration | Cherry Refrigeration" bug in every inner page.
   title: {
-    default: "Cold Room Installation Brisbane | Cherry Refrigeration",
-    template: "%s | Cherry Refrigeration",
+    default: DEFAULT_TITLE,
+    template: "%s",
   },
-  description:
-    "Brisbane custom cold room installation, refrigeration and air conditioning. 24/7 emergency line. Free fixed-price quote within 24 hours. Call Keith on 0432 115 513.",
-  alternates: { canonical: business.url },
+  description: DEFAULT_DESCRIPTION,
+  alternates: { canonical: siteConfig.siteUrl + "/" },
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: business.url,
-    siteName: business.name,
-    title: "Cold Room Installation Brisbane | Cherry Refrigeration",
-    description:
-      "Custom-built, energy-efficient cold rooms across Brisbane and SE QLD. Free fixed-price quote within 24 hours.",
-    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630, alt: "Cherry Refrigeration Brisbane" }],
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.name,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630, alt: "Cherry Refrigeration Brisbane cool room specialists" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cold Room Installation Brisbane | Cherry Refrigeration",
-    description: "Brisbane custom cold room installer. Free fixed-price quote in 24 hours.",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
@@ -52,9 +59,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-AU" className={`${inter.variable} ${manrope.variable}`}>
       <head>
-        <link rel="alternate" hrefLang="en-AU" href={business.url} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>

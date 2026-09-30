@@ -2,7 +2,7 @@ import { Wrench, Zap, Clock, ShieldCheck, Award, PhoneCall } from "lucide-react"
 import { Reveal, RevealStagger, RevealChild } from "./Reveal";
 
 const items = [
-  { icon: Wrench, title: "Custom-built to your space", copy: "Every cold room is engineered to fit your tenancy — corner pieces, awkward walls, low ceilings, no problem." },
+  { icon: Wrench, title: "Custom-built to your space", copy: "Every cool room is engineered to fit your tenancy — corner pieces, awkward walls, low ceilings, no problem." },
   { icon: Zap, title: "Energy-efficient panels", copy: "100mm and 150mm high-density EPS or PIR. Combined with EC-fan evaporators and inverter condensers, typically 25–40% cheaper to run." },
   { icon: Clock, title: "Fast 2-week turnaround", copy: "From sign-off to commissioning in 7–14 working days for most fitouts. Industrial scale on a documented timeline." },
   { icon: ShieldCheck, title: "Refrigeration + electrical in one quote", copy: "Refrigeration and electrical scope coordinated in-house, so you get one program, one quote and one point of contact." },

@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 const moneyAnchors = [
   { id: "overview", label: "Overview" },
   { id: "process", label: "Process" },
-  { id: "types", label: "Cold room types" },
+  { id: "types", label: "Cool room types" },
   { id: "pricing", label: "Sizing" },
   { id: "projects", label: "Projects" },
   { id: "coverage", label: "Coverage" },
@@ -51,7 +51,7 @@ const moneyAnchors = [
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const s = getService(params.slug);
   if (!s) return notFound();
-  const isMoneyPage = s.slug === "cold-room-installation-brisbane";
+  const isMoneyPage = s.slug === "cool-room-installation-brisbane";
   const content = serviceContent[s.slug] || [];
   const faqs = isMoneyPage ? moneyPageFaqs : serviceFaqs[s.slug] || [];
 
@@ -59,7 +59,12 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     <>
       <JsonLd
         data={[
-          serviceSchema({ name: s.title, description: s.metaDescription, slug: s.slug }),
+          serviceSchema({
+            name: s.title,
+            description: s.metaDescription,
+            slug: `services/${s.slug}`,
+            alternateName: s.alternateNames,
+          }),
           faqSchema(faqs),
         ]}
       />
@@ -67,7 +72,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
       {isMoneyPage && <StickyAnchorNav anchors={moneyAnchors} />}
 
-      <Breadcrumbs items={[{ name: "Services", href: "/services/cold-room-installation-brisbane" }, { name: s.shortTitle, href: `/services/${s.slug}` }]} />
+      <Breadcrumbs items={[{ name: "Services", href: "/services/cool-room-installation-brisbane" }, { name: s.shortTitle, href: `/services/${s.slug}` }]} />
 
       <section id="overview" className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10 scroll-mt-32">
         <div className="lg:col-span-2 space-y-8">
@@ -97,8 +102,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           </section>
           <section id="types" className="container-x py-14 lg:py-20 scroll-mt-32">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="badge-cherry">Cold room types</span>
-              <h2 className="h2 mt-3">Every type of cold room we install</h2>
+              <span className="badge-cherry">Cool room types</span>
+              <h2 className="h2 mt-3">Every type of cool room we install</h2>
             </div>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {[
@@ -106,8 +111,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 { title: "Freezer rooms", copy: "-18°C to -25°C for meat, seafood, ice cream, dough. 150mm panels." },
                 { title: "Combi cool/freezer rooms", copy: "Two zones, one envelope, one shared plant. Cheaper to run and install." },
                 { title: "Blast chillers and freezers", copy: "Rapid -35°C cells matched to kill or production cycles." },
-                { title: "Modular cold rooms", copy: "Fast-deploy modular rooms for sites that need it on the ground in days." },
-                { title: "Mobile and trailer cold rooms", copy: "Event, overflow and emergency cold storage on wheels." },
+                { title: "Modular cool rooms", copy: "Fast-deploy modular rooms for sites that need it on the ground in days." },
+                { title: "Mobile and trailer cool rooms", copy: "Event, overflow and emergency cold storage on wheels." },
               ].map((x) => (
                 <div key={x.title} className="card p-6">
                   <h3 className="font-display font-bold text-navy mb-2">{x.title}</h3>
@@ -121,9 +126,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <div className="grid lg:grid-cols-2 gap-10 items-start">
                 <div>
                   <span className="badge-cherry">Sizing & quotes</span>
-                  <h2 className="h2 mt-3">Typical Brisbane cold room sizes</h2>
+                  <h2 className="h2 mt-3">Typical Brisbane cool room sizes</h2>
                   <p className="lede mt-3">
-                    Every install is custom-quoted after an on-site measure-up — because no two cold rooms are the same.
+                    Every install is custom-quoted after an on-site measure-up — because no two cool rooms are the same.
                     Below is a quick reference for the sizes and temperatures we install most.
                   </p>
                   <p className="text-steel mt-3 leading-relaxed">
@@ -131,7 +136,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                     sign is the number you pay — no scope creep, no surprise extras.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
-                    <Link href="/cost-guide/cold-room-installation-cost-brisbane" className="btn-primary">What affects your quote</Link>
+                    <Link href="/cost-guide/cool-room-installation-cost-brisbane" className="btn-primary">What affects your quote</Link>
                     <QuoteCta className="btn-outline">Get a fixed quote</QuoteCta>
                   </div>
                 </div>

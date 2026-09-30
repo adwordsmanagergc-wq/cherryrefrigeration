@@ -1,34 +1,40 @@
-import { business } from "./business";
+import { siteConfig } from "./siteConfig";
 import { services } from "./services";
 
+const url = () => siteConfig.siteUrl;
+
+function nonEmptyAddress() {
+  const a = siteConfig.address;
+  const parts: Record<string, string> = {};
+  if (a.street) parts.streetAddress = a.street;
+  if (a.locality) parts.addressLocality = a.locality;
+  if (a.region) parts.addressRegion = a.region;
+  if (a.postcode) parts.postalCode = a.postcode;
+  parts.addressCountry = a.country;
+  return { "@type": "PostalAddress", ...parts };
+}
+
 export function localBusinessSchema() {
-  const sameAs = [business.social.facebook, business.social.instagram, business.social.google].filter(Boolean);
+  const sameAs = [siteConfig.gbpUrl, siteConfig.facebook, siteConfig.instagram, siteConfig.linkedin].filter(Boolean);
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
-    "@id": `${business.url}#business`,
-    name: business.name,
-    legalName: business.legalName,
-    image: `${business.url}/images/cherry-refrigeration-logo.png`,
-    logo: `${business.url}/images/cherry-refrigeration-logo.png`,
-    url: business.url,
-    telephone: business.phoneIntl,
-    email: business.email,
+    "@id": `${url()}#business`,
+    name: siteConfig.name,
+    legalName: siteConfig.legalName,
+    image: `${url()}/images/cherry-refrigeration-logo.png`,
+    logo: `${url()}/images/cherry-refrigeration-logo.png`,
+    url: url(),
+    telephone: siteConfig.phoneIntl,
+    email: siteConfig.email,
     priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: business.address.street,
-      addressLocality: business.address.locality,
-      addressRegion: business.address.region,
-      postalCode: business.address.postcode,
-      addressCountry: business.address.country,
-    },
+    address: nonEmptyAddress(),
     geo: {
       "@type": "GeoCoordinates",
-      latitude: business.geo.lat,
-      longitude: business.geo.lng,
+      latitude: siteConfig.geo.lat,
+      longitude: siteConfig.geo.lng,
     },
-    areaServed: business.serviceAreas.map((a) => ({ "@type": "City", name: a })),
+    areaServed: siteConfig.serviceAreas.map((a) => ({ "@type": "City", name: a })),
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -45,21 +51,36 @@ export function localBusinessSchema() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Refrigeration & Electrical Services",
+      name: "Refrigeration and Electrical Services",
       itemListElement: services.map((s) => ({
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: s.title, url: `${business.url}/services/${s.slug}` },
+        itemOffered: {
+          "@type": "Service",
+          name: s.title,
+          alternateName: s.alternateNames,
+          url: `${url()}/services/${s.slug}`,
+        },
       })),
     },
   };
+
+  if (siteConfig.emergency247) {
+    (schema.openingHoursSpecification as unknown[]).push({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+      description: "24/7 emergency line for total breakdowns",
+    });
+  }
+
+  if (siteConfig.abn) schema.taxID = siteConfig.abn;
   if (sameAs.length) schema.sameAs = sameAs;
-  // aggregateRating intentionally omitted — only emit when real Google review
-  // data is wired in. Faking it is a Google rich-results policy violation.
-  if (business.rating) {
+  if (siteConfig.rating) {
     schema.aggregateRating = {
       "@type": "AggregateRating",
-      ratingValue: business.rating.value,
-      reviewCount: business.rating.count,
+      ratingValue: siteConfig.rating.value,
+      reviewCount: siteConfig.rating.count,
     };
   }
   return schema;
@@ -69,12 +90,12 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: business.name,
-    url: business.url,
-    logo: `${business.url}/images/cherry-refrigeration-logo.png`,
+    name: siteConfig.name,
+    url: url(),
+    logo: `${url()}/images/cherry-refrigeration-logo.png`,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: business.phoneIntl,
+      telephone: siteConfig.phoneIntl,
       contactType: "customer service",
       areaServed: "AU",
       availableLanguage: "en",
@@ -86,11 +107,11 @@ export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": `${business.url}#website`,
-    url: business.url,
-    name: business.name,
+    "@id": `${url()}#website`,
+    url: url(),
+    name: siteConfig.name,
     inLanguage: "en-AU",
-    publisher: { "@id": `${business.url}#business` },
+    publisher: { "@id": `${url()}#business` },
   };
 }
 
@@ -112,17 +133,20 @@ export function serviceSchema(opts: {
   description: string;
   slug: string;
   area?: string;
+  alternateName?: string[];
 }) {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: opts.name,
     name: opts.name,
     description: opts.description,
-    provider: { "@type": "HVACBusiness", name: business.name, url: business.url },
+    provider: { "@id": `${url()}#business` },
     areaServed: { "@type": "City", name: opts.area || "Brisbane" },
-    url: `${business.url}/services/${opts.slug}`,
+    url: `${url()}/${opts.slug.replace(/^\//, "")}`,
   };
+  if (opts.alternateName?.length) schema.alternateName = opts.alternateName;
+  return schema;
 }
 
 export function faqSchema(faqs: { q: string; a: string }[]) {
@@ -141,21 +165,25 @@ export function articleSchema(opts: {
   title: string;
   description: string;
   date: string;
+  updated?: string;
   author: string;
   url: string;
+  image?: string;
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: opts.title,
     description: opts.description,
     datePublished: opts.date,
-    author: { "@type": "Person", name: opts.author },
-    publisher: {
-      "@type": "Organization",
-      name: business.name,
-      logo: { "@type": "ImageObject", url: `${business.url}/images/cherry-refrigeration-logo.png` },
+    dateModified: opts.updated || opts.date,
+    author: {
+      "@type": "Person",
+      name: opts.author,
+      url: `${url()}/about`,
     },
+    image: opts.image ? [opts.image] : [`${url()}/images/og-default.jpg`],
+    publisher: { "@id": `${url()}#business` },
     mainEntityOfPage: opts.url,
   };
 }

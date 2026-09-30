@@ -2,11 +2,11 @@ import { locations, type Location } from "./locations";
 import { services, type Service } from "./services";
 
 // Which services get city-scoped pages. Only the highest-intent services get
-// their own city URLs — that keeps content unique per page and avoids thin
+// their own city URLs. That keeps content unique per page and avoids thin
 // duplicate pages.
 const CITY_SERVICE_SLUGS = [
-  "cold-room-installation-brisbane",
-  "cold-room-repairs-brisbane",
+  "cool-room-installation-brisbane",
+  "cool-room-repairs-brisbane",
   "freezer-room-installation-brisbane",
 ] as const;
 
@@ -21,13 +21,9 @@ export type CityServiceCombo = {
   metaDescription: string;
 };
 
-// "cold-room-installation-brisbane" → "cold-room-installation"
+// "cool-room-installation-brisbane" -> "cool-room-installation"
 function trimBrisbaneSuffix(slug: string): string {
   return slug.replace(/-brisbane$/, "");
-}
-
-function friendlyServiceName(service: Service) {
-  return service.shortTitle;
 }
 
 export function getCityServiceCombos(): CityServiceCombo[] {
@@ -36,17 +32,16 @@ export function getCityServiceCombos(): CityServiceCombo[] {
       const s = services.find((x) => x.slug === serviceSlug)!;
       const shortServiceSlug = trimBrisbaneSuffix(s.slug);
       const url = `/service-area/${l.slug}/${shortServiceSlug}`;
-      const svc = friendlyServiceName(s);
-      const h1 = `${svc} in ${l.city}`;
+      const svc = s.shortTitle;
       return {
         citySlug: l.slug,
         serviceSlug: shortServiceSlug,
         city: l.city,
         service: svc,
         url,
-        h1,
+        h1: `${svc} in ${l.city}`,
         metaTitle: `${svc} ${l.city} | Cherry Refrigeration`,
-        metaDescription: `${svc} in ${l.city} and surrounds. ${l.responseTime}. Free fixed-price quote within 24 hours. Call Keith on 0432 115 513.`,
+        metaDescription: `${svc} in ${l.city}. ${l.responseTime}. Free fixed price quote in 24 hours. Call Keith 0432 115 513.`,
       };
     })
   );

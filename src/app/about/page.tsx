@@ -5,8 +5,8 @@ import { CTASection } from "@/components/CTASection";
 import { business } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "About Cherry Refrigeration | Brisbane Cold Room Specialists",
-  description: "Cherry Refrigeration — Brisbane custom cold room installation, refrigeration and air conditioning, founded by Keith Cherry.",
+  title: "About Cherry Refrigeration | Brisbane Cool Room Specialists",
+  description: "Cherry Refrigeration — Brisbane custom cool room installation, refrigeration and air conditioning, founded by Keith Cherry.",
   alternates: { canonical: `${business.url}/about` },
 };
 
@@ -15,8 +15,8 @@ export default function AboutPage() {
     <>
       <Hero
         eyebrow="About Cherry Refrigeration"
-        h1="Cold rooms, refrigeration and electrical — done by the same team"
-        sub="Cherry Refrigeration is a Brisbane custom cold room installer founded by Keith Cherry, covering refrigeration, electrical and air conditioning across South East Queensland."
+        h1="Cool rooms, refrigeration and electrical — done by the same team"
+        sub="Cherry Refrigeration is a Brisbane custom cool room installer founded by Keith Cherry, covering refrigeration, electrical and air conditioning across South East Queensland."
       />
       <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
           <h2 className="h3 mb-3">Founded by Keith Cherry</h2>
           <p className="text-steel leading-relaxed">
             Cherry Refrigeration is run by Keith Cherry, a Brisbane refrigeration mechanic who was sick of seeing
-            cold rooms fail because someone cut corners on the install. The business was built around a simple
+            cool rooms fail because someone cut corners on the install. The business was built around a simple
             promise: one trade, one quote, one warranty, and the same person on the phone whether you're getting
             quoted or chasing a callback.
           </p>

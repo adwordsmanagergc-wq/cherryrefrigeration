@@ -10,7 +10,7 @@ const rows: Row[] = [
   { size: "Medium chiller", dims: "5m × 4m × 2.7m", temp: "2–5°C", typical: "Restaurant, grocer, medical" },
   { size: "Freezer room", dims: "5m × 5m × 2.7m", temp: "-18°C", typical: "Butcher, bakery, seafood" },
   { size: "Combi cool/freezer", dims: "6m × 4m × 2.7m", temp: "2°C / -18°C", typical: "Supermarket, distribution" },
-  { size: "Industrial cold room", dims: "8m × 6m × 3.6m+", temp: "-22°C", typical: "3PL, cold storage, brewery" },
+  { size: "Industrial cool room", dims: "8m × 6m × 3.6m+", temp: "-22°C", typical: "3PL, cold storage, brewery" },
 ];
 
 export function PricingTable() {
@@ -49,7 +49,7 @@ export function PricingTable() {
           </colgroup>
           <thead className="bg-ice text-navy text-sm">
             <tr>
-              <th className="px-4 py-3 font-display font-bold">Cold room type</th>
+              <th className="px-4 py-3 font-display font-bold">Cool room type</th>
               <th className="px-4 py-3 font-display font-bold">Typical size</th>
               <th className="px-4 py-3 font-display font-bold">Temperature</th>
               <th className="px-4 py-3 font-display font-bold">Common use</th>

@@ -9,11 +9,11 @@ import { services } from "@/lib/services";
 import { QuoteCta } from "./QuoteCta";
 
 const nav = [
-  { label: "Services", href: "/services/cold-room-installation-brisbane", children: services.map((s) => ({ label: s.shortTitle, href: `/services/${s.slug}` })) },
+  { label: "Services", href: "/services/cool-room-installation-brisbane", children: services.map((s) => ({ label: s.shortTitle, href: `/services/${s.slug}` })) },
   { label: "Industries", href: "/industries/restaurants-cafes" },
   { label: "Locations", href: "/locations/brisbane-cbd" },
-  { label: "Cost Guide", href: "/cost-guide/cold-room-installation-cost-brisbane" },
-  { label: "Projects", href: "/projects" },
+  { label: "Cost Guide", href: "/cost-guide/cool-room-installation-cost-brisbane" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

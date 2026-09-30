@@ -33,14 +33,14 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <JsonLd data={serviceSchema({ name: `Cold Room Installation ${l.city}`, description: l.metaDescription, slug: `locations/${l.slug}`, area: l.city })} />
+      <JsonLd data={serviceSchema({ name: `Cool Room Installation ${l.city}`, description: l.metaDescription, slug: `locations/${l.slug}`, area: l.city })} />
       <Hero eyebrow={`Service area: ${l.city}`} h1={l.h1} sub={l.intro} />
       <Breadcrumbs items={[{ name: "Locations", href: "/locations/brisbane-cbd" }, { name: l.city, href: `/locations/${l.slug}` }]} />
 
       <section className="container-x py-14 lg:py-20 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 space-y-8">
           <div>
-            <h2 className="h3 mb-3">Cold room installation in {l.city}</h2>
+            <h2 className="h3 mb-3">Cool room installation in {l.city}</h2>
             <p className="text-steel leading-relaxed">
               {l.city} is a working part of Cherry Refrigeration's weekly route. Whether you're a hospitality operator
               fitting out a new tenancy, a butcher upgrading to a carcass-rated room, or a logistics operator commissioning
@@ -105,7 +105,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
           </div>
 
           <div className="card p-6 bg-cherry text-white">
-            <h3 className="font-display font-bold text-xl mb-2">Cold room down in {l.city}?</h3>
+            <h3 className="font-display font-bold text-xl mb-2">Cool room down in {l.city}?</h3>
             <p className="text-white/90 text-sm mb-4">24/7 emergency line for total breakdowns. Same-day breakdown response across {l.region} during business hours.</p>
             <a href={tel} className="inline-flex items-center gap-2 bg-white text-cherry font-bold px-4 py-2 rounded-md hover:bg-ice">
               <Phone className="h-4 w-4" /> Call {business.phone}
@@ -118,7 +118,7 @@ export default function LocationPage({ params }: { params: { slug: string } }) {
         </aside>
       </section>
 
-      <CTASection heading={`Get a free fixed-price quote for your ${l.city} cold room`} />
+      <CTASection heading={`Get a free fixed price quote for your ${l.city} cool room`} />
     </>
   );
 }
